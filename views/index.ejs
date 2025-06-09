@@ -1,0 +1,39 @@
+<!--like html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Engine</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <h1>Search Engine</h1>
+    <form>
+        <input type="text" name="question" id="question">
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+</html>
+
+<script>
+    const form=document.querySelector("form");
+    const questionElement=form.question;
+    
+
+    form.addEventListener("submit",async (e)=>{
+        e.preventDefault();
+        const question=questionElement.value;
+        //fetch
+        try{
+        const res=await fetch(`/search?question=${question}`,{method:"GET"});
+        const data=await res.json();
+        }
+        catch(error){
+            //you can make it a div or website like oops theres a error occured
+           alert(error);
+        }
+        console.log(data);
+    })
+</script>
