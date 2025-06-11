@@ -10,9 +10,9 @@ app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-const codes = fs.readFileSync('./data/codechef_code.txt', 'utf-8').split('\n');
-const names = fs.readFileSync('./data/codechef_name.txt', 'utf-8').split('\n');
-const diffs = fs.readFileSync('./data/codechef_difficulty.txt', 'utf-8').split('\n');
+const codes = fs.readFileSync('./data_codechef/codechef_code.txt', 'utf-8').split('\n');
+const names = fs.readFileSync('./data_codechef/codechef_name.txt', 'utf-8').split('\n');
+const diffs = fs.readFileSync('./data_codechef/codechef_difficulty.txt', 'utf-8').split('\n');
 
 const loadProblems = () => {
 
@@ -110,7 +110,7 @@ app.post('/search', (req, res) => {
      }
    }
  
-   const tfidfLines = fs.readFileSync('./data/TFIDF.txt', 'utf-8').split('\n');
+   const tfidfLines = fs.readFileSync('./data_codechef/TFIDF.txt', 'utf-8').split('\n');
  
    const similarities = tfidfLines.map((line, index) => {
      const tokens = line.trim().split(/\s+/);

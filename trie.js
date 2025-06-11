@@ -37,8 +37,8 @@ class Trie {
 const trie = new Trie();
 
 // File paths
-const wordFilePath = path.join(__dirname, '/data/codechef_lexicographical_word.txt');
-const idfFilePath = path.join(__dirname, '/data/codechef_idf.txt');
+const wordFilePath = path.join(__dirname, '/data_codechef/codechef_lexicographical_word.txt');
+const idfFilePath = path.join(__dirname, '/data_codechef/codechef_idf.txt');
 
 // Load files
 const words = fs.readFileSync(wordFilePath, 'utf-8').split('\n');
