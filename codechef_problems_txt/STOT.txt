@@ -1,0 +1,116 @@
+S to T
+You are given
+2 binary strings
+S and
+T, of length
+N. Here, binary strings means both
+S and
+T contain only
+0s and
+1s.
+Is it possible to make
+S equal to
+T using at most
+3⋅N such operations:
+Choose
+1≤i<N such that
+S
+i
+=1 and then flip
+S
+i+1
+, i.e. change it from
+0 to
+1 or
+1 to
+0.
+If it is possible, please print an operation sequence. If it is impossible, print
+−1. You do not need to minimize the length of the sequence. If multiple sequences are possible, all will be accepted.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of multiple lines of input.
+The first line contains
+N - the length of the string.
+The second line contains
+S - the initial string.
+The third line contains
+T - the target string.
+Output Format
+For each test case, print the following:
+if it is possible, print:
+on the first line, print
+K(0≤K≤3⋅N) the number of operations performed.
+on the second line, print
+K integers
+X
+1
+,X
+2
+,...,X
+K
+(1≤X
+i
+<N) the indices chosen for each of the
+K operations in that order.
+if it is not possible, print
+−1.
+Constraints
+1≤T≤10
+4
+2≤N≤2⋅10
+5
+∣S∣=∣T∣=N
+S
+i
+∈{0,1}
+T
+i
+∈{0,1}
+The sum of
+N over all test cases does not exceed
+2⋅10
+5
+.
+Sample 1:
+Input
+Output
+4
+4
+0110
+0101
+2
+01
+10
+2
+10
+11
+2
+00
+00
+2
+3 2
+-1
+1
+1
+0
+Explanation:
+Test Case 1 : In the first test case, we first choose
+i=3 (note
+S
+3
+=1) and flip
+S
+4
+to get
+0111. Then, we choose
+i=2 (note
+S
+2
+=1) and flip
+S
+3
+to get
+0101, which equals
+T.
+Test Case 2 : It can be proven to be impossible.

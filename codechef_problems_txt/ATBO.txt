@@ -1,0 +1,122 @@
+Operating on A
+Alice is given two arrays
+A and
+B, each consisting of
+N integers. Note that both arrays have 1-based indexing.
+She can perform the following operation on array
+A any number of times:
+Choose any
+2≤i≤N−2 and update the values of
+A
+i−1
+,A
+i
+,A
+i+1
+,A
+i+2
+as following :
+A
+i−1
+=
+A
+i−1
++A
+i
++A
+i+1
+A
+i
+=
+−A
+i+1
+A
+i+1
+=
+−A
+i
+A
+i+2
+=
+A
+i+2
++A
+i+1
++A
+i
+Note: The new values of
+A
+i−1
+,A
+i
+,A
+i+1
+,A
+i+2
+are updated simultaneously using the old values.
+Find whether it is possible to transform the array
+A to
+B using any number of operations.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of multiple lines of input.
+The first line of each test case contains a integer
+N — the length of the arrays.
+The second line of each test case contains
+N space-separated integers - values of the array
+A .
+The third line of each test case contains
+N space-separated integers - values of the array
+B .
+Output Format
+For each test case, print Yes if it is possible to transform array
+A into array
+B using any number of operations, otherwise print No.
+You may print each character of the string in uppercase or lowercase (for example, the strings YES, yEs, yes, and yeS will all be treated as identical).
+Constraints
+1≤T≤10
+5
+4≤N≤2⋅10
+5
+−10
+9
+≤A
+i
+,B
+i
+≤10
+9
+The sum of
+N over all test cases won't exceed
+2⋅10
+5
+.
+Sample 1:
+Input
+Output
+3
+4
+1 1 1 1
+1 1 1 1
+4
+1 -2 3 5
+3 1 -2 7
+4
+0 -3 4 0
+1 -4 3 1
+YES
+NO
+YES
+Explanation:
+Test case
+1: Both the arrays are already same so no operation is needed.
+Test case
+2: There is no sequence of operations using which array
+A can be transformed into array
+B .
+Test case
+3: In this case, after applying the operation on index
+2 the transformed array is
+[1,−4,3,1] which is same as array
+B .

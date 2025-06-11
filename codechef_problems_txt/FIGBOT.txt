@@ -1,0 +1,101 @@
+FightBots
+Alice and Bob are competing in the finals of a FightBots tournament.
+The match takes place on the
+2-D plane.
+Alice's robot starts at position
+(0,0), while Bob's starts at position
+(X,Y).
+It is guaranteed that
+(X,Y)
+
+=(0,0).
+The match lasts for
+N seconds. Every second, both robots must move exactly one unit up, down, left, or right. The two robots may move in different directions.
+Alice has a string
+S of length
+N containing only the characters
+{L,R,U,D}, and has decided that she will move according to it.
+That is, if
+S
+i
+=R, Alice will move her robot one unit right in the
+i-th second. This means the
+x-coordinate of Alice's robot will increase by
+1.
+Similarly, the characters
+L, U, D correspond to left (
+x-coordinate decreases by
+1), up (
+y-coordinate increases by
+1), and down (
+y-coordinate decreases by
+1) movements of one unit, respectively.
+If both robots are at the same location after some moves have been made, Bob wins (even if less than
+N seconds have passed). If
+N seconds pass without this happening, Alice wins.
+Does Bob have a sequence of moves that will allow him to win?
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of two lines of input.
+The first line of each test case contains three space-separated integers
+N,X, and
+Y — the length of the match, and the coordinates of Bob's initial position.
+The second line contains a string
+S of length
+N, denoting the sequence of moves Alice will make.
+Output Format
+For each test case, output on a new line the answer: Yes if Bob has a sequence of moves that will allow him to win, and No otherwise.
+Each character of the output may be printed in either uppercase or lowercase, i.e, the strings NO, no, No, and nO will all be treated as equivalent.
+Constraints
+1≤T≤100
+1≤N≤100
+0≤X,Y≤100
+(X,Y)
+
+=(0,0)
+S
+i
+∈{L,R,U,D}
+Sample 1:
+Input
+Output
+4
+5 2 4
+RRDLU
+4 1 0
+RRDU
+6 10 20
+RRRUUU
+3 1 1
+DUL
+Yes
+No
+No
+Yes
+Explanation:
+Test case
+1: Alice's sequence of moves is
+RRDLU.
+Her robot will thus follow the path
+(0,0)→(1,0)→(2,0)→(2,−1)→(1,−1)→(1,0).
+Bob starts at
+(2,4). If he follows the path
+DDLDD, his robot will move as:
+(2,4)→(2,3)→(2,2)→(1,2)→(1,1)→(1,0).
+At the end of the
+5-th move, both robots are at
+(1,0), so Bob wins.
+Test case
+2: Alice's sequence of moves is
+RRDU.
+Her robot will thus follow the path
+(0,0)→(1,0)→(2,0)→(2,−1)→(2,0).
+Even though Bob's robot starts at
+(1,0), since he must move every second, he can never be on the same position as Alice.
+Test case
+3: Bob starts too far away from Alice.
+Test case
+4: Bob can move as
+LDU. After the second move, both robots will be at
+(0,0) so Bob wins.

@@ -1,0 +1,59 @@
+Palindromic Prime Numbers
+A palindromic prime number is a positive integer that is both a prime number (meaning it has exactly two divisors:
+1 and itself) and a palindrome in base
+10 (meaning it reads the same both backwards and forwards).
+Leading zeros are not considered when determining if a number is a palindrome (so
+20 is not a palindrome, even though it can be written as
+020).
+You are given an integer
+N.
+Consider the first
+N palindromic prime numbers. How many of them have an even number of digits, and how many of them have an odd number of digits?
+Some examples:
+2,7, and
+11 are palindromic primes.
+22 and
+121 are palindromes that are not primes.
+17 and
+37 are primes that are not palindromes.
+42 is neither a palindrome nor a prime.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+The first and only line of each test case contains a single integer
+N — meaning you must consider the first
+N palindromic prime numbers.
+Output Format
+For each test case, output on a new line two space-separated integers: among the first
+N palindromic primes, the number of them that have an even number of digits and the number of them that have an odd number of digits, respectively.
+Constraints
+1≤T≤10
+5
+1≤N≤10
+5
+Sample 1:
+Input
+Output
+3
+1
+4
+8
+0 1
+0 4
+1 7
+Explanation:
+Test case
+1:
+N=1, so we only consider the first palindromic prime,
+2. It has one digit.
+Test case
+2:
+N=4, so we consider the first four palindromic primes
+[2,3,5,7].
+They all have one digit.
+Test case
+3: The first
+8 palindromic primes are
+[2,3,5,7,11,101,131,151].
+Of them,
+11 has two digits (an even number) and everything else has either one or three digits (which are odd).

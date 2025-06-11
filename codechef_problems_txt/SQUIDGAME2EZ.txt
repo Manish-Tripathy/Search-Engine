@@ -1,0 +1,84 @@
+Glass Bridge (Easy)
+This is the easy version of the problem. The only difference between this version and the hard version are the constraints on
+N and
+M
+Chef is watching the new season of Squid Game, where contestants face a glass bridge challenge.
+The bridge has
+M steps, and each step consists of two glass panels suspended side by side.
+Exactly one panel on each step is strong enough to support a contestant's weight, while the other panel will shatter, causing the contestant to fall and die.
+There are
+N contestants who cross the bridge one by one, in sequence. Each contestant can observe the path taken by the previous contestant(s).
+For each step
+i (1≤i≤M), determine the probability that all
+N contestants die before crossing step
+i.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of a single line of input comprising of two space-separated integers
+N and
+M denoting the number of contestants and the number of steps respectively.
+Output Format
+For each test case, print
+M space-separated integers where
+i
+th
+integer is probability of all
+N contestants dying before crossing step
+i.
+The probability can be written in the form of
+Q
+P
+such that
+Q is not divisible by
+10
+9
++7. Output the value of
+P⋅Q
+−1
+mod(10
+9
++7) .
+Constraints
+1≤T,N,M≤2⋅10
+3
+The sum of
+N and the sum of
+M over all test cases won't exceed
+2⋅10
+3
+.
+Sample 1:
+Input
+Output
+3
+1 2
+1 1
+2 3
+500000004 750000006 
+500000004 
+0 250000002 500000004
+Explanation:
+Test Case 1 : The answers are
+1/2,
+3/4.
+The probability of the contestants crossing
+1
+st
+step is
+1/2 and the probability of them crossing both steps is
+1/4, hence the probability of them dying before crossing
+1
+st
+and
+2
+nd
+steps are
+(1−1/2) and
+(1−1/4) respectively.
+Test Case 2 : The answer is
+1/2
+Test Case 3 : The answers are
+0,
+1/4,
+1/2

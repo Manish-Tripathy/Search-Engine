@@ -1,0 +1,165 @@
+Xorry 1
+You are given an integer
+X. Two integers (
+A,
+B) are said to be an Xorry pair, if the following conditions are satisfied:
+A⊕B=X
+0≤A≤B≤X
+Among all the pairs which satisfy the above two conditions,
+(B−A) is as small as possible
+For example, suppose
+X=6.
+Then, the pair
+(0,6) satisfies the first two conditions. But, the pair
+(2,4) also satisfies the first two conditions. And since,
+(6−0) is larger than
+(4−2), the pair
+(0,6) does not have the smallest possible difference, and so, it is not an Xorry pair.
+You can verify that the pairs
+(2,4) and
+(3,5) are the only two Xorry pairs for
+X=6. This is explained further in the sample explanation below.
+Output any one Xorry pair for a given X.
+Note that
+⊕ refers to bitwise XOR.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of a single line which contains a single integer,
+X.
+Output Format
+For each test case, output on a new line, two space separated integers,
+A and
+B, where
+(A,B) is an Xorry pair, for that particular
+X.
+If there are multiple Xorry pairs, output any one of them.
+Constraints
+1≤T≤10
+5
+1≤X≤10
+9
+Sample 1:
+Input
+Output
+5
+1
+2
+3
+4
+6
+0 1
+0 2
+1 2
+0 4
+2 4
+Explanation:
+Test case 1:
+X=1. The only pair of integers which satisfies the first two conditions is
+A=0, and
+B=1.
+This satisfies the first two conditions, since
+0⊕1=1, and
+0≤1≤1.
+Since there is only one pair which satisfies the first two conditions, this is also the pair with the smallest
+(B−A), and hence is the only Xorry pair.
+So, the only answer for this testcase is
+(0,1).
+Test case 2:
+X=2=(10)
+2
+. The only pair of integers which satisfies the first two conditions
+A=0, and
+B=2.
+This satisfies the first two conditions, since
+(00)
+2
+⊕(10)
+2
+=(10)
+2
+=2, and
+0≤2≤2.
+Since there is only one pair which satisfies the first two conditions, this is also the pair with the smallest
+(B−A), and hence is the only Xorry pair.
+So, the only answer for this testcase is
+(0,2).
+Note that
+(10)
+2
+refers to the binary representation of
+2.
+Test case 3:
+X=3=(11)
+2
+. There are two pairs which satisfy the first two conditions:
+A=0, and
+B=3
+A=1, and
+B=2
+(1,2) satisfies both the conditions, since
+(01)
+2
+⊕(10)
+2
+=(11)
+2
+=3, and
+1≤2≤3.
+Among these two pairs,
+(B−A) is smallest only in the second pair. Hence the only Xorry pair is
+A=1, and
+B=2.
+So, the only answer for this testcase is
+(1,2).
+Test case 4:
+X=4=(100)
+2
+. The only pair of integers which satisfies the first two conditions is
+A=0, and
+B=4.
+This satisfies the first two conditions, since
+(000)
+2
+⊕(100)
+2
+=(100)
+2
+=4, and
+0≤4≤4.
+Since there is only one pair which satisfies the first two conditions, this is also the pair with the smallest
+(B−A), and hence is the only Xorry pair.
+So, the only answer for this testcase is
+(0,4).
+Test case 5:
+X=6=(110)
+2
+. There are three pairs which satisfy the first two conditions:
+A=0, and
+B=6
+A=2, and
+B=4
+A=3, and
+B=5
+(3,5) satisfies both the conditions, since
+(011)
+2
+⊕(101)
+2
+=(110)
+2
+=6, and
+3≤5≤6.
+But among these three pairs,
+(B−A) is smallest only in the last two pairs, which have
+(B−A) as
+2, whereas the first pair has
+(B−A) as
+6. Hence the only Xorry pairs are
+A=2, and
+B=4, and
+A=3, and
+B=5.
+So, the two possible answers for this testcase are
+(2,4), or
+(3,5). You need to output any one of these two pairs.

@@ -1,0 +1,90 @@
+Minimise Inversions
+You are given a binary string
+S of length
+N (1≤N≤5⋅10
+3
+) and an integer
+K.
+You can flip
+†
+†
+at most
+K characters of the string
+S. Find the minimum number of inversions
+‡
+‡
+in the final string.
+†
+†
+During a flip,
+0 changes to
+1 and vice-versa.
+‡
+‡
+A pair of indices
+(i,j) is said to be an inversion if
+1≤i<j≤∣S∣ and
+S
+i
+>S
+j
+.
+Input Format
+The first line contains a single integer
+T, denoting the number of test cases.
+The first line of each test case contains two positive integers
+N and
+K
+− the length of
+S and the number of flips that you can perform.
+The second line of each test contains a binary string
+S of length
+N.
+Output Format
+For each test case, output on a new line, the minimum number of inversions that you can get.
+Constraints
+1≤T≤10
+4
+0≤K≤N
+1≤N≤5⋅10
+3
+The sum of
+N over all test cases won't exceed
+2⋅10
+5
+.
+The sum of
+N
+2
+over all test cases won't exceed
+5⋅10
+7
+.
+Sample 1:
+Input
+Output
+3
+3 1
+101
+4 1
+1010
+5 0
+11000
+0
+1
+6
+Explanation:
+Test case
+1: We can flip
+S
+1
+using one flip to obtain
+S=001 with zero inversions.
+Test case
+2: We can flip
+S
+1
+using one flip to obtain
+S=0010 with one inversion
+(3,4). It can be shown that we cannot achieve less than one inversion using at most
+1 flip.

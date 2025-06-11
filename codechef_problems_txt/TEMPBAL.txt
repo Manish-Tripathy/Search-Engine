@@ -1,0 +1,151 @@
+Temperature Balance
+There are
+N chambers of water in a line. Between the
+i-th chamber and the
+(i+1)-th chamber for each
+1≤i<N, there is a wall blocking heat from moving between the two chambers. The water in the
+i-th chamber has a temperature level of
+A
+i
+. Additionally, it is known in advance that the sum of
+A
+i
+is
+0.
+Each second, you lift exactly one wall, letting heat move between two chambers. Then, the temperature level of the hotter side decreases by
+1, while that of the colder side increases by
+1. Formally:
+Each second, you choose an integer
+i (
+1≤i<N), and lift the wall between the
+i-th chamber and the
+(i+1)-th chamber. Then, the following happens.
+If
+A
+i
+>A
+i+1
+currently, the two temperature values change to
+A
+i
+:=A
+i
+−1 and
+A
+i+1
+:=A
+i+1
++1 the exact next second.
+If
+A
+i
+<A
+i+1
+currently, the two temperature values change to
+A
+i
+:=A
+i
++1 and
+A
+i+1
+:=A
+i+1
+−1 the exact next second.
+If
+A
+i
+=A
+i+1
+currently, nothing happens for one second.
+After this second, the chamber closes.
+Please find the minimum number of seconds needed to make all temperature levels exactly
+0. It can be shown that it is always possible to make all temperature levels exactly
+0 in a finite number of seconds.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of multiple lines of input.
+The first line of input contains
+N - the number of chambers
+The second line contains
+N integers,
+A
+1
+,A
+2
+,...,A
+N
+representing the temperature levels of the chambers.
+Output Format
+For each test case, print the minimum seconds needed.
+Constraints
+1≤T≤10
+4
+1≤N≤5⋅10
+5
+−10
+6
+≤A
+i
+≤10
+6
+The sum of
+A
+i
+over all
+1≤i≤N is exactly
+0.
+The sum of
+N over all test cases won't exceed
+5⋅10
+5
+.
+Sample 1:
+Input
+Output
+5
+4
+1 0 0 -1
+10
+2 0 1 0 0 0 0 -1 0 -2
+8
+2 0 -1 0 0 1 0 -2
+10
+2 0 0 0 1 -1 0 0 0 -2
+14
+6 0 0 3 0 -4 0 1 0 0 0 -10 0 4
+3
+23
+11
+19
+78
+Explanation:
+Test Case 1 : One can make all temperature levels
+0 in
+3 seconds by the following process.
+Second
+0: Lift the wall between the
+1st chamber and the
+2nd chamber. Then
+a becomes
+[0,1,0,−1] at Second
+1.
+Second
+1: Lift the wall between the
+2nd chamber and the
+3rd chamber. Then
+a becomes
+[0,0,1,−1] at Second
+2.
+Second
+2: Lift the wall between the
+3rd chamber and the
+4th chamber. Then
+a becomes
+[0,0,0,0] at Second
+3.
+It can be shown that one cannot make all temperature levels
+0 in
+2 seconds. Therefore, the minimum answer is
+3.

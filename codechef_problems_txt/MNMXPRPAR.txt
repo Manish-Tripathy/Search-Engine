@@ -1,0 +1,153 @@
+Min-Max Product Partition
+Consider an integer sequence
+B of length
+M. We define a few terms.
+A two-partition of
+B is an ordered pair of non-empty sets
+(S,T) satisfying the following conditions:
+S∪T={1,2,3,…,M}
+S∩T=∅
+The score of a two-partition
+P=(S,T) is defined as
+score(P):=min
+i∈S
+(B
+i
+)×max
+j∈T
+(B
+j
+).
+That is, the score of a two-partition is the product of the smallest element among the indices of
+S, and the largest element among the indices of
+T.
+Finally, define
+f(B) to be the sum of scores of all two-partitions of
+B.
+You are given an array
+A of length
+N.
+Your task is to process the following
+Q updates to it:
+Given
+x and
+v, set
+A
+x
+to
+v.
+Output
+f(A) initially and also after each update.
+Since the values of
+f(A) can be large, compute them modulo
+998244353.
+†
+†
+A sequence
+b is a subsequence of an array
+a if
+b can be obtained from
+a by deleting some (possibly zero or all) elements.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of multiple lines of input.
+The first line of each test case contains two space-separated integers
+N and
+Q — the length of the array and the number of queries, respectively.
+The second line contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+— the initial values of the array.
+The next
+Q lines describe the updates. The
+i-th of these lines contains two space-separated integers
+x
+i
+and
+v
+i
+, the parameters for the
+i-th update.
+Output Format
+Print
+Q+1 integers: the value of
+f(A) initially and after each update.
+Constraints
+1≤T≤10
+4
+2≤N≤2⋅10
+5
+1≤Q≤2⋅10
+5
+1≤A
+i
+≤10
+9
+1≤x
+i
+≤N
+1≤v
+i
+≤10
+9
+The sum of
+N and the sum of
+Q over all test cases both won't exceed
+2⋅10
+5
+.
+Sample 1:
+Input
+Output
+2
+3 3
+1 2 1
+2 1
+3 2
+1 3
+4 5
+3 2 4 1
+3 5
+1 9
+2 7
+1 8
+2 11
+10
+6
+10
+22
+78
+92
+196
+346
+318
+436
+Explanation:
+Test case
+1: These are all the possible partitions and their scores before the first query:
+S={1},
+T={2,3},
+score=2
+S={1,2},
+T={3},
+score=1
+S={1,3},
+T={2},
+score=2
+S={2,3},
+T={1},
+score=1
+S={2},
+T={1,3},
+score=2
+S={3},
+T={1,2},
+score=2
+So,
+f(A)=10, before the first query.

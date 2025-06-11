@@ -1,0 +1,73 @@
+Flip Prefix
+You are given a binary string
+S of length
+N, i.e.
+S
+i
+=0 or
+1.
+You can do the following operation as many times as you want (possibly zero):
+Choose a prefix
+S[1,X] (
+1≤X≤N) such that there are equal number of
+0s and
+1s in this prefix, and then flip
+†
+†
+that prefix.
+For example, in the string
+001101, we can choose the prefix of length
+4 which has
+2
+0s and
+2
+1s, flipping it produces
+110001.
+Count the number of possible strings you can obtain by doing these operations.
+†
+†
+To flip a string means to change all
+0s to
+1s and all
+1s to
+0s.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of multiple lines of input.
+The first line of each test case contains
+N - the size of the string
+The second line contains
+S - a binary string.
+Output Format
+For each test case, output on a new line the count of strings obtainable.
+Constraints
+1≤T≤100
+1≤N≤60
+∣S∣=N
+S
+i
+∈{0,1}
+Sample 1:
+Input
+Output
+3
+3
+010
+4
+0010
+6
+001101
+2
+1
+4
+Explanation:
+Test Case 1 : Flip the prefix of length
+2 to obtain
+100. The original string,
+010 should also be counted. Hence the answer is
+2.
+Test Case 2 : No prefixes have equal
+0s and
+1s, so no operations are possible. The original string
+0010 is the only possible string.

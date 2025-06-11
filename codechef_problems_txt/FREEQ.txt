@@ -1,0 +1,99 @@
+Frequal
+An array
+A of length
+N is called frequal if, for each
+i (
+1≤i≤N), the frequency of
+A
+i
+equals the number of its positive divisors.
+For example,
+[2,8,1,8,8,8,2] is a frequal array (
+1 has one divisor,
+2 has two divisors, and
+8 has four divisors), while
+[10,4,10,4,4,10] is not (
+10 has four divisors but appears only three times in the array).
+Let
+f(A) denote the number of distinct elements in
+A.
+For instance,
+f([1,1,1,1])=1, and
+f([1,3,2,9,2,9,1])=4.
+You are given an integer
+N.
+Find any frequal array
+A of length
+N such that
+f(A) is as large as possible.
+The array should satisfy
+1≤A
+i
+≤10
+6
+.
+It can be shown that such a frequal array always exists.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of a single line of input, containing one integer
+N.
+Output Format
+For each test case, output on a new line
+N space-separated integers representing a frequal array of length
+N such that
+f(A) is maximal.
+Each integer in the output must lie between
+1 and
+10
+6
+.
+If there are multiple possible arrays satisfying this condition, you may print any of them.
+Constraints
+1≤T≤500
+1≤N≤2⋅10
+4
+The output must satisfy
+1≤A
+i
+≤10
+6
+.
+The sum of
+N over all test cases won't exceed
+2⋅10
+5
+.
+Sample 1:
+Input
+Output
+2
+2
+8
+2 2
+4 1 3 5 5 4 3 4
+Explanation:
+Test case
+1: We have
+A=[2,2], which has
+f(A)=1. It is frequal since
+2 has two divisors.
+It can be shown that no frequal array of length
+2 can have two distinct elements.
+Test case
+2: Consider
+A=[4,1,3,5,5,4,3,4]. It has four distinct elements.
+Let's look at their frequencies and divisors:
+1 has a single divisor (itself), and also appears only once.
+3 has two divisors (
+1 and
+3), and appears twice.
+4 has three divisors (
+1,2,4), and also appears three times.
+5 has two divisors (
+1 and
+5), and appears twice.
+So, this array is frequal.
+It can be shown that a frequal array of length
+8 with
+≥5 distinct elements doesn't exist, so this array is optimal.

@@ -1,0 +1,143 @@
+Subtraction Sequence I
+Consider an array
+B of size
+M.
+We must perform the following operations with parameter
+i=M−1,M−2,…,1 (in this order):
+Note that the order of operations is different than SUBSEQII.
+Choose an index
+j such that
+i<j≤M;
+Replace
+B
+j
+in the array with
+max(0,B
+j
+−B
+i
+).
+Note that the subsequent operations will be performed with the updated array
+B.
+At the end of all operations, let
+f(B) denote the maximum possible sum of all elements of array
+B.
+You are given an array
+A of size
+N, you must first find
+f(A), and then handle
+Q updates of the form :
+Given integers
+X and
+Y, set
+A
+X
+=Y. Now, print the new value of
+f(A).
+Note that the changes made to the array
+A are permanent.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of multiple lines of input.
+The first line of each test case contains two space-separated integers
+N and
+Q — the size of the array
+A and the number of queries.
+The line contains
+N space-separated integers -
+A
+1
+,A
+2
+,…,A
+N
+.
+The next
+Q lines each contain
+2 integers, the values of the parameters
+X and
+Y for this query.
+Output Format
+For each test case, output
+Q+1 lines, the initial value of
+f(A) and the new values of
+f(A) after each query.
+Constraints
+1≤T≤4⋅10
+4
+1≤N,Q≤2⋅10
+5
+1≤X≤N
+1≤A
+i
+,Y≤10
+9
+The sum of
+N and the sum of
+Q do not exceed
+2⋅10
+5
+over all test cases.
+Sample 1:
+Input
+Output
+2
+3 5
+1 2 4
+1 10
+1 1
+3 1
+3 10
+1 3
+5 5
+7 5 5 8 9
+4 1
+4 9
+4 4
+3 6
+4 8
+4
+12
+4
+3
+10
+11
+25
+25
+26
+22
+23
+26
+Explanation:
+Test case
+1: The initial array is
+[1,2,4].
+Pick
+j=3 for
+i=2. The array becomes
+[1,2,2]
+Pick
+j=3 for
+i=1. The array becomes
+[1,2,1], which has a sum of
+4.
+It can be shown it's impossible to do better.
+After
+1st update : the array
+A=[10,2,4] and picking
+j=3 for both the operations yields us a final array
+[10,2,0], which has a sum of
+12, which is again provably optimal.
+After
+5th update : the array
+A=[3,2,10] and picking
+j=3 for operation with
+i=2, and then
+j=2 for operation with
+i=1 gives us a final array
+[3,0,8], which gives us a sum of
+11. This is the optimal answer.
+Note that choosing
+j=3 for both operations would yield a sum of
+10.

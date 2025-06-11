@@ -1,0 +1,134 @@
+Motive
+Baby, tell me, what's your motive? (Motive)
+What's your motive?
+What's your motive? (Ah)
+So tell me, what's your motive? (What's your motive?)
+You are given an array
+A consisting of
+N positive integers.
+In one operation, you have to:
+Calculate the lcm and gcd of the array;
+Multiply each element of the array by the calculated lcm, and divide each element of the array by the calculated gcd.
+Formally, let
+A
+X
+be the array after performing
+X operations, where
+A
+0
+=A.
+Let
+G denote the gcd of
+A
+(X−1)
+and
+L denote the lcm of
+A
+(X−1)
+.
+Then,
+A
+X
+=A
+(X−1)
+⋅
+G
+L
+=[A
+1
+(X−1)
+⋅
+G
+L
+,A
+2
+(X−1)
+⋅
+G
+L
+,…,A
+N
+(X−1)
+⋅
+G
+L
+].
+You are given
+Q queries. Each query is represented an integer
+K.
+Find the gcd and lcm of
+A
+K
+modulo
+10
+9
++7.
+Input Format
+The first line will contain a single integer
+N, denoting the number of integers in
+A.
+The second line will contain
+N positive integers
+A
+1
+,A
+2
+,…,A
+N
+, denoting the integers in
+A.
+The third line will contain a single integer
+Q, denoting the number of queries.
+The next
+Q lines each will contain a single integer
+K, denoting the number of operations to perform.
+Output Format
+For each query, output the gcd and lcm of
+A
+K
+, modulo
+10
+9
++7.
+Constraints
+1≤N≤5⋅10
+5
+1≤A
+i
+≤10
+7
+1≤Q≤10
+5
+0≤K≤10
+9
+Sample 1:
+Input
+Output
+5
+95 143 58 119 69
+3
+1
+3
+5
+469693188 309321521
+298495478 683994827
+620264520 762751641
+Explanation:
+Query
+1: The gcd and lcm of
+A=[95,143,58,119,69] are
+1 and
+6469693230.
+Thus,
+A
+1
+=[614620856850,925166131890,375242207340,769893494370,446408832870].
+The gcd and lcm of
+A
+1
+modulo
+10
+9
++7 are
+469693188 and
+309321521 respectively.

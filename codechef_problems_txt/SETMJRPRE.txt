@@ -1,0 +1,116 @@
+Set Major (Prefix)
+This is the easy version of the problem. The only difference with the easy version is that here, you need to only count the number of prefixes of the given array that are dominating - all constraints and definitions otherwise remain the same.
+This problem is worth
+100 points in divisions
+2,3, and
+4, and is not scored in division
+1.
+An array
+B of length
+M is said to be dominating if each of its prefixes and suffixes has a majority element.
+Formally,
+For each
+i (
+1≤i≤M), in the prefix
+[B
+1
+,B
+2
+,…,B
+i
+], there should exist an element that appears strictly more than
+⌊
+⌊
+2
+i
+⌋ times.
+For each
+i (
+1≤i≤M), in the suffix
+[B
+i
+,B
+i+1
+,…,B
+M
+], there should exist an element that appears strictly more than
+⌊
+⌊
+2
+M−i+1
+⌋ times.
+Here,
+⌊x⌋ denotes the largest integer that doesn't exceed
+x.
+For example,
+⌊
+⌊
+2
+5
+⌋=2 and
+⌊
+⌊
+2
+6
+⌋=3.
+Note that it is allowed for different prefixes and suffixes of
+B to have different majorities - the only condition is that they must each have a majority.
+You are given an array
+A of length
+N. Count the number of its prefixes that are dominating.
+That is, count the number of integers
+i such that
+1≤i≤N, and the subarray
+[A
+1
+,A
+2
+,…,A
+i
+] is dominating.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of two lines of input.
+The first line of each test case contains a single integer
+N — the number of elements in the array.
+The next line contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+— the elements of the array.
+Output Format
+For each test case, output on a new line the number of dominating prefixes.
+Constraints
+1≤T≤10
+5
+1≤N≤2⋅10
+5
+1≤A
+i
+≤N
+The sum of
+N over all test cases won't exceed
+2⋅10
+5
+.
+Sample 1:
+Input
+Output
+2
+5
+1 1 2 1 2
+4
+3 3 3 3
+2
+4
+Explanation:
+Test case
+1: The dominating prefixes are:
+A[1,1],A[1,2]. No other prefix is dominating.
+Test case
+2: Every prefix is dominating.

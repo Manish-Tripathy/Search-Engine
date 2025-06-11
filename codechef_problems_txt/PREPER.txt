@@ -1,0 +1,115 @@
+Perfect Prefixes
+A permutation of length
+N is an array of length
+N that contains every integer from
+1 to
+N exactly once.
+For example,
+[1,3,2] and
+[2,1,3] are permutations of length
+3, but
+[2,1,2] and
+[3,4,2] are not.
+The beauty of a permutation
+P is defined to be the number of prefixes of
+P that are themselves permutations.
+That is, it is the number of integers
+i (
+1≤i≤N) such that the array
+[P
+1
+,P
+2
+,…,P
+i
+] is a permutation of length
+i.
+You are given a permutation
+P of length
+N.
+You can perform the following operation on it at most once:
+Choose two integers
+L and
+R such that
+1≤L<R≤N, and
+L and
+R have different parities.
+That is, if
+L is odd then
+R should be even, and vice versa.
+Then, for each
+i=L,L+2,L+4,…,R−1, swap
+P
+i
+with
+P
+i+1
+.
+In simpler words, you can choose a subarray of
+P that has even length, partition it into blocks of length
+2, and swap the elements within each block.
+For example, if
+P=[3,1,5,2,6,4] and you choose
+L=2 and
+R=5, the resulting permutation is
+P=[3,5,1,6,2,4].
+Find the maximum possible beauty of
+P after performing at most one such operation.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of two lines of input.
+The first line of each test case contains a single integer
+N — the length of the permutation.
+The second line contains
+N space-separated integers
+P
+1
+,P
+2
+,…,P
+N
+.
+Output Format
+For each test case, output on a new line the maximum possible beauty of
+P after performing at most one operation.
+Constraints
+1≤T≤10
+5
+1≤N≤2⋅10
+5
+P contains each integer from
+1 to
+N exactly once.
+The sum of
+N over all test cases won't exceed
+2⋅10
+5
+.
+Sample 1:
+Input
+Output
+3
+5
+3 1 4 2 5
+6
+2 1 3 4 6 5
+4
+1 2 3 4
+4
+5
+4
+Explanation:
+Test case
+1: Perform the operation with
+L=1,R=4 to obtain
+[1,3,2,4,5].
+The prefixes of length
+1,3,4,5 are permutations now, which is the best we can do.
+Test case
+2: Perform the operation with
+L=5,R=6 to obtain
+[2,1,3,4,5,6] which has every prefix except length
+1 be a permutation.
+Test case
+3: It's optimal to not perform any operation, every prefix is already a permutation.

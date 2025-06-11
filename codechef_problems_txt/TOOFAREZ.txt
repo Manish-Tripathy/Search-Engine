@@ -1,0 +1,120 @@
+Too Far For Comfort (Easy Version)
+This is the easy version of TOOFAR, and is worth
+40 points.
+An array
+A of length
+M is said to be prefix-balanced under the following conditions:
+Let
+S
+A
+denote the set of all elements that appear in
+A.
+For each
+x∈S
+A
+, and index
+i (
+1≤i≤M), let
+f
+i
+(x) denote the number of times
+x appears among
+[A
+1
+,A
+2
+,…,A
+i
+].
+That is,
+f
+i
+(x) denotes the frequency of
+x in
+A's prefix of length
+i.
+Then,
+A is called prefix-balanced if, for every triple of integers
+(x,y,i) such that
+x,y∈S
+A
+and
+1≤i≤M, we have
+∣f
+i
+(x)−f
+i
+(y)∣≤1
+For example, the arrays
+[1,2,1] and
+[1,3,2,3] are prefix-balanced, but
+[2,3,2,4] is not (the prefix of length
+3 contains two occurrences of
+2 and no occurrences of
+4).
+You are given two integers
+N and
+M.
+There are
+M
+N
+arrays of length
+N whose elements lie between
+1 and
+M. How many of them are prefix-balanced?
+The answer might be large, so find it modulo
+998244353.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of a single line of input, containing two space-separated integers
+N and
+M.
+Output Format
+For each test case, output on a new line the number of arrays of prefix-balanced arrays of length
+N, whose elements lie in
+[1,M]. Report the answer modulo
+998244353.
+Constraints
+1≤T≤10
+5
+1≤N≤5⋅10
+5
+1≤M≤5⋅10
+5
+The sum of
+N and the sum of
+M over all test cases both won't exceed
+5⋅10
+5
+.
+Sample 1:
+Input
+Output
+4
+1 10
+3 4
+5 8
+3 4567
+10
+52
+15688
+402085806
+Explanation:
+Test case
+1: There are
+10 possible arrays, all of which are prefix-balanced.
+Test case
+2: There are
+4
+3
+=64 possible arrays. Of them, the ones that are not prefix-balanced are:
+[1,1,2],[1,1,3],[1,1,4],
+[2,2,1],[2,2,3],[2,2,4],
+[3,3,1],[3,3,2],[3,3,4],
+[4,4,1],[4,4,2],[4,4,3].
+Test case
+4: The actual answer is
+95235299341, which when taken modulo
+998244353 is
+402085806.

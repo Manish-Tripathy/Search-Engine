@@ -1,0 +1,149 @@
+Binary Grid Forces
+You are given a list
+L consisting of
+N binary strings, each of length
+M.
+You can do the following operation any (possibly zero) number of times:
+Swap
+2 positions in
+L
+i
+if the same
+2 positions are both
+1 currently in
+L
+i+1
+.
+More formally, in one operation, you can:
+Pick
+3 integers
+i,j,k such that:
+1≤i<N;
+1≤j<k≤M;
+L
+(i+1,j)
+=L
+(i+1,k)
+=1.
+Swap the characters
+L
+(i,j)
+and
+L
+(i,k)
+.
+Count the number of different possible strings
+L
+1
+after some (possibly zero) operations.
+Since the answer may be large, output the answer modulo
+10
+9
++7.
+Note that
+L
+(i,j)
+denotes the
+j
+th
+character of the
+i
+th
+binary string in list
+L.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of multiple lines of input.
+The first line of each test case contains two space-separated integers
+N and
+M — the number of binary strings, and the size of each string.
+The
+i
+th
+of the next
+N lines contains the
+i
+th
+string of the list
+L, i.e.
+L
+i
+.
+Output Format
+For each test case, output a single integer, the number of unique strings
+L
+1
+modulo
+10
+9
++7.
+Constraints
+1≤T≤10
+3
+1≤N,M≤10
+6
+L
+(i,j)
+∈{0,1}
+The sum of
+N⋅M over all test cases doesn't exceed 10^6.
+Sample 1:
+Input
+Output
+5
+2 3
+101
+110
+3 5
+11111
+00000
+11111
+3 5
+10101
+11100
+00111
+3 3
+110
+001
+111
+1 1
+1
+2
+1
+10
+1
+1
+Explanation:
+Test case
+1: You can't change
+L
+2
+so the only positions you can swap in
+L
+1
+are the
+1st and
+2nd.
+Thus you can get the string
+011 by doing
+1 operation with
+i=1,j=1,k=2 and the string
+101 by doing no operations. It can be shown, you can't get any other string as
+L
+1
+.
+Test case
+2: You can't change
+L
+1
+at all because you will never get a
+1 in
+L
+2
+regardless of what you do.
+Test case
+3: It can be shown that all permutations of the initial string
+L
+1
+are possible.

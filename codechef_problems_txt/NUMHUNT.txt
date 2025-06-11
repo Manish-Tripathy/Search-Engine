@@ -1,0 +1,72 @@
+Number Hunt
+Given a positive integer
+X, find the smallest positive integer
+Y satisfying all of the following conditions:
+Y should not be a prime;
+Y should not be a perfect square;
+No factor of
+Y other than
+1 is less than
+X.
+Note that
+Y might not fit in a
+32 bit integer.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of a positive integer
+X as mentioned in the statement.
+Output Format
+For each test case, output on a new line, the smallest positive integer
+Y satisfying the given conditions.
+Note that
+Y might not fit in a
+32 bit integer.
+Constraints
+1≤T≤5
+1≤X≤10
+9
+Sample 1:
+Input
+Output
+3
+1
+2
+3
+6
+6
+15
+Explanation:
+Test case
+1: Let us consider all values of
+Y in increasing order:
+Y=2: It is a prime.
+Y=3: It is a prime.
+Y=4: It is a perfect square
+(4=2
+2
+).
+Y=5: It is a prime.
+Y=6: It is neither prime, nor a perfect square. The non-
+1 factors of
+6 are
+2,3 and
+6, none of which are less than
+X=1.
+Thus,
+6 is the smallest integer satisfying the given conditions.
+Test case
+2:
+Y=6 has non-
+1 factors
+2,3, and
+6, none of which are less than
+X=2.
+Test case
+3: The smallest integer satisfying the conditions is
+15. The non-
+1 factors of
+15 are
+3,5 and
+15, none of which are less than
+X=3.

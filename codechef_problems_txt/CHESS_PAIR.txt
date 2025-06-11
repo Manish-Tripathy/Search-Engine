@@ -1,0 +1,52 @@
+Chess Pairing
+You are hosting a chess tournament with
+2N people. Exactly
+X of them are rated players, and the remaining
+2N−X are unrated players.
+Your job is to distribute the players into
+N pairs, where every player plays against the person paired up with them.
+Since you want the rated players to have an advantage, you want to pair them with unrated players. Thus, you want to minimize the number of rated players whose opponent is also rated.
+Print the minimum number of rated players whose opponents are also rated, among all possible pairings.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of
+1 line containing
+2 space-separated integers
+N and
+X, meaning there are
+2N players, and
+X of them are rated.
+Output Format
+For each test case, output on a new line the minimum number of rated players who will have rated opponents.
+Constraints
+1≤T≤2600
+1≤N≤50
+0≤X≤2⋅N
+Sample 1:
+Input
+Output
+6
+1 0
+1 1
+1 2
+4 4
+4 6
+10 20
+0
+0
+2
+0
+4
+20
+Explanation:
+Test case
+1: There is no rated player and hence no rated player has a opponent who is also rated. Thus the answer is
+0.
+Test case
+2: There is only one match, which is between a rated player and an unrated player. Thus the answer is
+0.
+Test case
+3: There is only one match, which is between
+2 rated players. Thus the answer is
+2 as both contribute to the count of rated players whose opponents are also rated.

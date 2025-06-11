@@ -1,0 +1,101 @@
+Bulk Discount
+A shop has
+N items for sale. The
+i-th item has a cost of
+A
+i
+.
+You would like to purchase all
+N items.
+The shop offers a discount: whenever an item is bought, all future purchases have their costs reduced by
+1. However, the cost of an item also cannot fall below
+0.
+You can buy the items in any order you like. What's the minimum possible cost of purchasing all
+N items?
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of two lines of input.
+The first line of each test case contains a single integer
+N — the number of items in the shop.
+The second line contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+.
+Output Format
+For each test case, output on a new line the minimum possible cost of buying all
+N items.
+Constraints
+1≤T≤10
+5
+1≤N≤2⋅10
+5
+1≤A
+i
+≤10
+9
+The sum of
+N over all test cases won't exceed
+2⋅10
+5
+.
+Sample 1:
+Input
+Output
+3
+2
+4 3
+4
+2 2 2 2
+4
+3 1 4 1
+6
+3
+3
+Explanation:
+Test case
+1: We buy the first item with a cost of
+4. This then discounts the second item by
+1, so we buy it for a cost of
+2, with the total coming out to
+4+2=6. This is optimal.
+Test case
+2: All the items have initial costs of
+2. The process is as follows:
+Buy one item with a cost of
+2. This reduces the cost of everything else by
+1, so they're all
+1 now.
+Buy one item with a cost of
+1. This reduces the cost of the remaining two items by
+1 again, so they both cost
+0.
+Buy one item with a cost of
+0. This reduces the cost of the last item by
+1 again. However, since it cannot go below
+0, it remains
+0.
+Buy the last item with a cost of
+0.
+The total spent is
+2+1+0+0=3.
+Test case
+3: Consider the following order:
+Buy the second item, with a cost of
+1. The other items' costs will reduce by
+1.
+Buy the fourth item, with a cost of
+1−1=0. The other items' costs will reduce by
+1.
+Buy the first item, with a cost of
+3−2=1. The other items' costs will reduce by
+1 again.
+Finally, buy the third item with a cost of
+4−3=1.
+The total spent is
+1+0+1+1=3.

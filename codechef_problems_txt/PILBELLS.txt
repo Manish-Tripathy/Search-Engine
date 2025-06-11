@@ -1,0 +1,64 @@
+Bells of Pilgrimage
+The Child of Prophecy has embarked on a journey to save the land of the Fae.
+On her journey, she must ring
+N Bells of Pilgrimage.
+The Child of Prophecy has an initial mana level of
+P. After that:
+Each of the first
+X bells she rings will increase her mana level by
+10.
+Each of the remaining bells will increase her mana level by
+5.
+As a bonus, once the final bell is rung, her mana level will increase by a further
+20.
+K bells have been rung so far. What is the current mana level of the Child of Prophecy?
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of a single line of input, containing four space-separated integers
+N,
+X,
+K, and
+P — as described in the statement.
+Output Format
+For each test case, output on a new line a single integer: the Child of Prophecy's current mana level.
+Constraints
+1≤T≤100
+1≤X<N≤10
+5
+0≤K≤N
+0≤P≤10
+5
+Sample 1:
+Input
+Output
+4
+6 2 0 80
+6 2 1 80
+6 2 4 80
+6 2 6 80
+80
+90
+110
+140
+Explanation:
+In all sample test cases, the initial mana level is
+80, the first two bells provide
++10 to it, and the next
+4 provide
++5 to it.
+Test case
+1: No bells were rung, so the mana level remains at
+80.
+Test case
+2: One bell was rung, so the mana level is
+80+10=90
+Test case
+3: Four bells were rung, so the mana level is
+80+10+10+5+5=110
+Test case
+4: All bells were rung, so the mana level is
+80+10+10+5+5+5+5+20=140.
+Note that the extra
+20 is a bonus for ringing all the bells; the last bell still provides
++5 on its own.

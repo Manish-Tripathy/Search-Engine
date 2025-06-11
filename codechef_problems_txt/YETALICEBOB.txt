@@ -1,0 +1,44 @@
+Yet Another Alice Bob Game
+Alice and Bob play a game on a pile of
+N stones.
+In her turn, Alice can remove at least one and at most
+A stones while Bob can remove at least one and at most
+B stones on his turn.
+The person who takes the last stone wins.
+Predict the winner of the game if Alice goes first (and turns alternate) under optimal play from both players.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of multiple lines of input.
+The first line of each test case contains three space-separated integers,
+N,
+A and
+B, the number of stones, and the maximum number of stones Alice and Bob can remove in one move respectively.
+Output Format
+For each test case, output on a new line Alice if Alice wins, or Bob if Bob wins.
+You may print each character in uppercase or lowercase. For example, the strings BOB, bob, Bob, and bOB are all considered identical.
+Constraints
+1≤T≤10
+5
+1≤N,A,B≤10
+9
+Sample 1:
+Input
+Output
+3
+3 2 1
+5 10 20
+1000000000 1 1
+Alice
+Alice
+Bob
+Explanation:
+In the first test case, Alice can first remove a single stone from the pile bringing it to
+2 stones. Then Bob is forced to remove
+1 stone, and Alice is able to take the last stone.
+In the second test case, Alice can take all
+5 stones on her first move.
+In the third test case, the entire game is forced (both players can only remove one stone) and after
+10
+9
+turns, Bob takes the last stone and wins.

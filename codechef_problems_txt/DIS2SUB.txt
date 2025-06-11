@@ -1,0 +1,70 @@
+Distinct 2 Subarray
+An array is called good if it has exactly
+2 distinct elements. For example,
+[1,1,2,1,2],[5,3] are good but
+[1,2,3] and
+[1,1,1] are not.
+You are given an array
+A of
+N elements and you should find the length of the shortest possible good subarray
+†
+†
+of
+A. If no good subarray exists, print
+−1 instead.
+†
+†
+B is said to be an subarray of
+A if
+B can be formed by deleting a (possibly empty) prefix of
+A and a (possibly empty) suffix of
+A. For example,
+[4,1,3],[3,5] and
+[4,1,3,5,2] are subarrays of
+[4,1,3,5,2] but
+[5,3] and
+[1,5] are not.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of multiple lines of input.
+The first line of each line contains
+N - the length of the array.
+The second line contains
+N integers -
+A
+1
+,A
+2
+,…,A
+N
+.
+Output Format
+For each test case, output on a new line the length of the shortest good subarray of
+A, or
+−1 if none exist.
+Constraints
+1≤T≤100
+1≤N≤100
+1≤A
+i
+≤100
+Sample 1:
+Input
+Output
+3
+2
+5 3
+1
+1
+4
+7 7 5 5
+2
+-1
+2
+Explanation:
+Test Case 1 :
+[5,3] itself is good, and is the shortest possible good subarray of
+A.
+Test Case 2 : There are no good subarrays because the only subarray contains
+1 distinct element only.

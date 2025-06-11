@@ -1,0 +1,67 @@
+Stamps 100
+You are given a binary string
+S of length
+N.
+You can apply the following operation any (possibly zero) number of times:
+Select an integer
+i (1≤i≤N−2) and replace the substring
+S
+i
+S
+i+1
+S
+i+2
+with 100.
+Find the lexicographically smallest string after the operations.
+Note: String
+X is lexicographically smaller than string
+Y if
+X
+i
+<Y
+i
+, where
+i is the first index where
+X and
+Y differ.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of multiple lines of input.
+The first line of each test case contains an integer
+N — the length of string
+S.
+The second line of each test case contains a binary string
+S.
+Output Format
+For each test case, output the lexicographically smallest string after the operations.
+Constraints
+1≤T≤10
+5
+3≤N≤3⋅10
+5
+∣S∣=N
+Each character of
+S is either 0 or 1.
+The sum of
+N over all test cases won't exceed
+3⋅10
+5
+.
+Sample 1:
+Input
+Output
+2
+3
+110
+4
+0001
+100
+0001
+Explanation:
+Test case
+1: You can convert
+S into 100. Since 100 is lexicographically smaller than 110, output 100.
+Test case
+2: You should keep
+S as it is without applying any operations, so output 0001.

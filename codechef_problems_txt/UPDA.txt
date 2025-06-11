@@ -1,0 +1,137 @@
+Updating A
+Alice and Bob have an array of
+A of
+N elements, and will play a game on it. They alternate turns, with Alice going first.
+On each turn:
+Let
+M denote the current length of
+A.
+If
+M=1, the game stops. Otherwise, the current player must make a move.
+On Alice's turn, she must choose integers
+L and
+R (
+1≤L<R≤M), delete the elements
+A
+L
+,A
+L+1
+,…,A
+R
+from the array,
+and insert
+∣A
+L
++A
+L+1
++…+A
+R
+∣ in their place.
+Note that
+∣x∣ denotes the absolute value of
+x.
+On Bob's turn, he must choose integers
+L and
+R (
+1≤L<R≤M), delete the elements
+A
+L
+,A
+L+1
+,…,A
+R
+from the array, and insert
+(A
+L
++A
+L+1
++…+A
+R
+) in their place.
+That is, Alice must choose some subarray, delete it, and insert the absolute value of its sum in its place.
+Bob will do the same, but insert just the sum (and not its absolute value).
+Note that since
+L<R, the length of the array will decrease after each move.
+Alice wants to maximize the value of the final element, while Bob wants to minimize it.
+If both Alice and Bob make their moves optimally, what will the value of the final element be?
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of two lines of input.
+The first line of each test case contains one integer
+N — the number of elements in
+A.
+The second line of each test case contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+, denoting the array
+A.
+Output Format
+For each test case, output on a new line the value of the final element if both players move optimally.
+Constraints
+1≤T≤10
+5
+1≤N≤10
+5
+−10
+9
+≤A
+i
+≤10
+9
+The sum of
+N over all test cases won't exceed
+4⋅10
+5
+.
+Sample 1:
+Input
+Output
+3
+1
+1
+2
+5 -7
+6
+1 1 -2 5 -2 -1
+1
+2
+8
+Explanation:
+Test case
+1: The array is already of length
+1, so no moves will be made.
+Test case
+2: Since
+L<R, Alice has no choice but to choose the entire array
+[5,−7] and replace it with
+∣5+(−7)∣=2, at which point the game ends.
+Test case
+3: One possible sequence of moves is as follows:
+Alice chooses
+L=5 and
+R=6, replacing the subarray
+[−2,−1] with its absolute sum
+3.
+The array is now
+A=[1,1,−2,5,3].
+Bob chooses
+L=2 and
+R=4, replacing the subarray
+[1,−2,5] with its sum
+4.
+The array is now
+A=[1,4,3].
+Alice chooses
+L=2 and
+R=3, turning the array into
+A=[1,7].
+Bob chooses
+L=1 and
+R=2, turning the array into
+A=[8].

@@ -1,0 +1,60 @@
+A power B mod C
+You are given an integer
+A (2≤A≤10
+9
+). Find two integers
+B and
+C such that:
+2≤A<B<C≤10
+18
+;
+A
+B
+%
+C=0;
+B
+C
+%
+A=0
+It can be proved that at least one solution exists. If multiple solutions exist, print any.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of a single integer
+A as mentioned in statement.
+Output Format
+For each test case, output two space-separated integers
+B and
+C satisfying the conditions.
+It can be proved that at least one solution exists. If multiple solutions exist, print any.
+Constraints
+1≤T≤10
+4
+2≤A≤10
+9
+Sample 1:
+Input
+Output
+2
+6
+10
+12 16
+30 32
+Explanation:
+Test case
+1: Consider
+B=12 and
+C=16:
+2≤A<B<C≤10
+18
+;
+6
+12
+%
+16=2176782336
+%
+16=0;
+12
+16
+%
+6=0

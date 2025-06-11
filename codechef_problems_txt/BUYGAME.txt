@@ -1,0 +1,104 @@
+Buying Game
+You want to buy
+N items from a store, which you will visit on Days
+1,
+2, ...,
+N. The normal cost of the
+i-th item is
+A
+i
+.
+However, on the
+i-th day, there is a promotional event for the
+i-th item. On this day, it's cost is
+B
+i
+instead.
+B
+i
+may be greater, smaller or even equal to
+A
+i
+.
+Thus, on the
+i-th day, the cost of the
+i-th item is
+B
+i
+while, the
+j-th item
+(j
+
+=i) costs
+A
+j
+.
+You will buy exactly one item on each of the
+N days. All the bought items must be distinct. Find the minimum possible cost.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of multiple lines of input.
+The first line contains
+N - the number of items
+The second line contains
+A
+1
+,A
+2
+,...,A
+N
+- the normal costs of the items
+The third line contains
+B
+1
+,B
+2
+,....,B
+N
+- the promotional costs of the items.
+Output Format
+For each test case, output on a new line the minimum cost.
+Constraints
+1≤T≤10
+4
+1≤N≤2⋅10
+5
+1≤A
+i
+,B
+i
+≤10
+9
+The sum of
+N over all test cases does not exceed
+2⋅10
+5
+Sample 1:
+Input
+Output
+2
+3
+1 2 3
+3 2 1
+2
+1 2
+2 1
+4
+3
+Explanation:
+Test Case 1 : The following is a possible optimal approach :
+Buy Item
+2 on Day
+1 for cost of
+2. (Normal Cost)
+Buy Item
+1 on Day
+2 for cost of
+1. (Normal Cost)
+Buy Item
+3 on Day
+3 for cost of
+1. (Promotional Cost)
+The total cost is
+2+1+1=4.

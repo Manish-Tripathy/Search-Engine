@@ -1,0 +1,80 @@
+Odd Matrix
+You are given an integer
+N.
+Your task is to construct a matrix of size
+N×N satisfying all the following conditions:
+All elements are between
+1 and
+N
+2
+;
+All elements are pairwise distinct;
+The sum of elements in every row is odd;
+The sum of elements in every column is odd.
+It can be shown that under the given constraints, at least one such matrix exists for every
+N.
+If there are multiple answers, you may print any.
+Input Format
+The first line of input contains a single integer
+T denoting the number of test cases.
+Each test case consists of a single line of input containing a single integer,
+N.
+Output Format
+For each test case, print
+N lines, each containing
+N integers.
+The
+j
+th
+integer of the
+i
+th
+line must be the element in
+i
+th
+row and
+j
+th
+column of the matrix.
+If there are multiple answers, you may print any one of them.
+Constraints
+1≤T≤100
+1≤N≤300
+The sum of
+N
+2
+over all testcases does not exceed
+10
+5
+Subtasks
+Subtask 1 (49 points):
+N is odd.
+Subtask 2 (51 points):
+N is even.
+Sample 1:
+Input
+Output
+2
+3
+5
+8 1 6
+3 5 7
+4 9 2
+1 2 3 4 5
+6 8 7 10 12
+9 11 13 15 17
+14 16 19 18 20
+21 22 23 24 25
+Explanation:
+Test case
+1: All elements of the matrix are distinct and the sum of every row and column is equal to
+15. Thus, all conditions are satisfied.
+Sample 2:
+Input
+Output
+1
+4
+1 2 4 6
+3 5 7 8
+9 10 11 13
+12 14 15 16

@@ -1,0 +1,59 @@
+Save People
+Chef has a
+2-D grid with
+N rows and
+M columns. The cell at the intersection of the
+i-th row and
+j-th column is denoted cell
+(i,j).
+Initially, only cell
+(x,y) of the grid is infected.
+Chef can select exactly one non-infected cell and vaccinate it. Then, the infection and the vaccine spread across the grid, as follows:
+First, any cell that is neither vaccinated nor infected, but is adjacent (horizontally or vertically) to an infected cell, becomes infected itself.
+Next, any cell that is neither vaccinated nor infected, but is adjacent (horizontally or vertically) to a vaccinated cell, becomes vaccinated itself.
+This process repeats till every cell in the grid is either infected or vaccinated.
+For example, on a
+6×6 grid with
+(x,y)=(2,2) and the vaccine placed at
+(5,4) initially, the spread would look like:
+Find the maximum possible number of vaccinated cells Chef can obtain, if he chooses the initial position of the vaccine optimally.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of two lines of input.
+The first line of each test case contains two space-separated integers
+N and
+M — the dimensions of the grid.
+The second line of each test case contains two space-separated integers
+x and
+y — the coordinates of the infected cell.
+Output Format
+For each test case, output on a new line the maximum number of vaccinated cells attainable.
+Constraints
+1≤T≤10
+5
+2≤N,M≤10
+5
+1≤x≤N
+1≤y≤M
+Sample 1:
+Input
+Output
+2
+3 3
+1 2
+3 2
+1 1
+6
+4
+Explanation:
+Test case
+1: It's optimal to vaccinate cell
+(2,2).
+The spread of infection and vaccine is visualized below.
+6 cells are vaccinated, and this is the best we can do.
+Test case
+2: It's optimal to vaccinate cell
+(2,1).
+The spread of infection and vaccine is visualized below.
+4 cells are vaccinated, which is the best we can do.

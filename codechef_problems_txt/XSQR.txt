@@ -1,0 +1,103 @@
+Xometry (Easy Version)
+This is the easy version of the problem. The only difference between the easy and hard versions is that in the easy version, all elements of
+A are pairwise distinct.
+You are given an array
+A containing
+N non-negative integers.
+Count the number of ordered quadruples
+(i,j,k,l) such that:
+1≤i,j,k,l≤N;
+The values
+i,j,k,l are pairwise distinct; and
+It is possible to form a rectangle
+ABCD with side lengths
+AB=A
+i
+⊕A
+j
+,BC=A
+j
+⊕A
+k
+,CD=A
+k
+⊕A
+l
+, and
+DA=A
+l
+⊕A
+i
+as shown in the figure below:
+Note that we're interested in ordered quadruples, so for example
+(1,2,3,4) and
+(2,1,4,3) must be counted separately if they're both valid.
+Please note that all the side lengths of the rectangles must be positive.
+Please note that in this version, all elements of
+A are pairwise distinct.
+Here,
+⊕ denotes the bitwise exclusive or operation.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of two lines of input.
+The first line of each test case contains an integer
+N — the number of elements in the array
+A.
+The next line contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+— the elements of array
+A.
+Output Format
+For each test case, output the number of ordered quadruples
+(i,j,k,l) that satisfy the properties on a new line.
+Constraints
+1≤T≤1000
+4≤N≤5000
+0≤A
+i
+≤10
+6
+The sum of
+N over all test cases won't exceed
+5000.
+All elements of
+A are pairwise distinct.
+Sample 1:
+Input
+Output
+2
+5
+1 2 3 4 5
+10
+8 7 6 4 3 2 1 0 5 9
+24
+432
+Explanation:
+Test case
+1: There are
+24 possible ordered quadruples. Two of them are:
+[i,j,k,l]=[5,2,3,4]. For this AB
+=5⊕2=7, BC
+=2⊕3=1, CD
+=3⊕4=7 and DA
+=4⊕5=1. Since AB = CD and AC = BD, this is a rectangle.
+[i,j,k,l]=[2,3,4,5]. For this AB
+=2⊕3=1, BC
+=3⊕4=7, CD
+=4⊕5=1 and DA
+=5⊕2=7. Since AB = CD and AC = BD, this is a rectangle.
+Test case
+2: There are
+432 possible ordered quadruples. One of them is:
+[i,j,k,l]=[3,4,6,8]. For this AB
+=6⊕4=2, BC
+=4⊕2=6, CD
+=2⊕0=2 and DA
+=0⊕6=6. Since AB = CD and AC = BD, this is a rectangle.

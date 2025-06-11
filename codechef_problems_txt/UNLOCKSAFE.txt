@@ -1,0 +1,139 @@
+Unlock The Safe
+Chef has a safe with
+N dials. The
+i-th dial initially shows the digit
+A
+i
+.
+To unlock the safe, the digit shown on the
+i-th dial should be
+B
+i
+.
+In order to achieve this, Chef can choose a dial and perform one of the following two moves on it:
+UP move: Increases the number on the chosen dial by
+1. If it is
+9 then it becomes
+1.
+DOWN move: Decreases the number on the chosen dial by
+1. If it is
+1 then it becomes
+9.
+In order to not seem too suspicious, Chef thinks he has to use exactly
+K moves to unlock the safe.
+Is it possible for Chef to unlock the safe while performing exactly
+K moves in the process?
+Note that Chef is allowed to reach the target digits even before
+K moves: however, even if he does, he must still continue making moves till he has made exactly
+K moves - it is not allowed to stop before that.
+See the example cases below for more clarity.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of three lines of input.
+The first line contains two space-separated integers
+N and
+K — the number of dials and the exact number of moves allowed.
+The second line contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+— the initial digits on the dials.
+The third line contains
+N space-separated integers
+B
+1
+,B
+2
+,…,B
+N
+— the target digits on the dials.
+Output Format
+For each test case, print the answer on a new line: YES if Chef can unlock the safe after using exactly
+K moves, and NO otherwise.
+You may print each character of the answer in either uppercase or lowercase (for example, the strings YES, yEs, yes, and yeS will all be treated as identical).
+Constraints
+⁠
+1≤T≤10
+5
+⁠
+1≤N≤2⋅10
+5
+⁠
+0≤K≤10
+9
+1≤A
+i
+,B
+i
+≤9
+The sum of
+N over all test cases does not exceed
+2⋅10
+5
+.
+Sample 1:
+Input
+Output
+6
+3 2
+1 2 3
+2 1 4
+3 7
+1 2 1
+2 1 9
+2 1
+5 6
+5 6
+2 9
+5 6
+5 6
+4 10
+4 6 1 7
+6 5 8 9
+4 12
+4 6 1 7
+6 5 8 9
+No
+Yes
+No
+Yes
+No
+Yes
+Explanation:
+Test case
+1: All three dials are different, but Chef wants to unlock in two moves. This is not possible, since only one dial can be changed in one move - so after two moves at least one dial will be incorrect.
+Test case
+2: One sequence of
+K=7 moves is as follows:
+UP on the first dial, now the sequence is
+[2,2,1].
+DOWN on the second dial, now the sequence is
+[2,1,1].
+UP on the third dial two times, now the sequence is
+[2,1,3].
+DOWN on the third dial three times, now the sequence is
+[2,1,9], and we've used
+1+1+2+3=7 moves as needed.
+Test case
+3: We already have
+A
+i
+=B
+i
+for every
+i initially. However, we need to perform a move, which will break that equality.
+Test case
+4: We have
+A
+i
+=B
+i
+for every
+i initially, and need to make
+9 moves. Simply perform an UP move on the first dial
+9 times, and it will end up back where it started.

@@ -1,39 +1,74 @@
-<!--like html-->
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search Engine</title>
-    <link rel="stylesheet" href="./styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Problem Search</title>
+  <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
-    <h1>Search Engine</h1>
-    <form>
-        <input type="text" name="question" id="question">
-        <input type="submit" value="Submit">
+  <div class="container">
+    <h1>CodeChef Problem Search</h1>
+    <form method="POST" action="/search">
+      <input type="text" name="query" placeholder="Search by name or code" />
+      <button type="submit">Search</button>
     </form>
-
-</body>
-</html>
-
-<script>
-    const form=document.querySelector("form");
-    const questionElement=form.question;
     
 
-    form.addEventListener("submit",async (e)=>{
-        e.preventDefault();
-        const question=questionElement.value;
-        //fetch
-        try{
-        const res=await fetch(`/search?question=${question}`,{method:"GET"});
-        const data=await res.json();
-        }
-        catch(error){
-            //you can make it a div or website like oops theres a error occured
-           alert(error);
-        }
-        console.log(data);
-    })
-</script>
+    <div class="problem-list" id="problem-list">
+      <% initial.forEach(problem => { %>
+        <a href="/problem/<%= problem.code %>" class="problem-link">
+          <div class="problem-card">
+            <h3><%= problem.name %></h3>
+            <p><strong>Code:</strong> <%= problem.code %></p>
+            <p><strong>Difficulty:</strong> <%= problem.difficulty %></p>
+          </div>
+        </a>
+      <% }) %>
+    </div>
+
+    <div id="loader" style="text-align:center; margin: 20px; color: gray;">Loading more...</div>
+  </div>
+
+  <script>
+    let offset = 100;
+    const limit = 100;
+    let loading = false;
+
+    async function loadMoreProblems() {
+      if (loading) return;
+      loading = true;
+      document.getElementById('loader').style.display = 'block';
+
+      const res = await fetch(`/api/problems?offset=${offset}&limit=${limit}`);
+      const newProblems = await res.json();
+
+      const container = document.getElementById('problem-list');
+      newProblems.forEach(p => {
+        const a = document.createElement('a');
+        a.href = `/problem/${p.code}`;
+        a.className = 'problem-link';
+        a.innerHTML = `
+          <div class="problem-card">
+            <h3>${p.name}</h3>
+            <p><strong>Code:</strong> ${p.code}</p>
+            <p><strong>Difficulty:</strong> ${p.difficulty}</p>
+          </div>`;
+        container.appendChild(a);
+      });
+
+      offset += limit;
+      if (newProblems.length < limit) {
+        document.getElementById('loader').innerText = 'No more problems.';
+      }
+      loading = false;
+    }
+
+    window.addEventListener('scroll', () => {
+      if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 100) {
+        loadMoreProblems();
+      }
+    });
+  </script>
+</body>
+</html>

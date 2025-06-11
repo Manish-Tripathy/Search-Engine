@@ -1,0 +1,130 @@
+Not-too-far Replacement
+You are given an array
+A of length
+N+1, denoted
+[A
+1
+,A
+2
+,…,A
+N+1
+].
+You can perform the following operation on the array
+A:
+Choose an index
+i (
+1≤i≤N) such that
+A
+i
+≤2⋅A
+N+1
+.
+Then, swap the values of
+A
+i
+and
+A
+N+1
+.
+That is, you can swap the element at index
+N+1 with some element of the array that's at most twice as large as it.
+You may perform this operation as many times as you like (even zero times).
+Find the minimum possible sum of the first
+elements of
+after the operations, i.e, the minimum possible value of
+A
+A
+1
++A
+2
++…+A
+N
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of two lines of input.
+The first line of each test case contains a single integer
+N — meaning the length of the array is
+N+1.
+The second line contains
+N+1 space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+,A
+N+1
+, the initial values of the array.
+Output Format
+For each test case, output on a new line the minimum possible sum of
+A after performing some replacement operations.
+Constraints
+1≤T≤200
+1≤N≤200
+1≤A
+i
+≤1000
+Sample 1:
+Input
+Output
+4
+4
+5 2 1 2 3
+3
+3 10 30 1
+4
+16 4 8 2 1
+4
+20 100 30 49 15
+8
+43
+15
+165
+Explanation:
+Test case
+1: Initially,
+A=[5,2,1,2,3].
+Perform one operation with
+i=1, which is allowed since
+5=A
+1
+≤2⋅A
+N+1
+=6.
+After the swap,
+A=[3,2,1,2,5].
+The sum of the first
+N elements is
+8, which is the minimum possible.
+Test case
+2: Initially,
+A=[3,10,30,1].
+A
+N+1
+cannot be swapped with anything since it's too small. So, the answer is just the sum of the first
+N elements, which is
+3+10+30=43.
+Test case
+3: Initially,
+A=[16,4,8,2,1]. Consider the following sequence of operations:
+Choose
+i=4, which is valid since
+2≤2⋅1. Now,
+A=[16,4,8,1,2].
+Choose
+i=2, which is valid since
+4≤2⋅2. Now,
+A=[16,2,8,1,4].
+Choose
+i=3, which is valid since
+8≤2⋅4. Now,
+A=[16,2,4,1,8].
+Choose
+i=1, which is valid since
+16≤2⋅8. Now,
+A=[8,2,4,1,16].
+The sum of the first
+N elements is
+15 which is the best we can do.

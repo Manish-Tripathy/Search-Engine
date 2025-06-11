@@ -1,0 +1,116 @@
+Mod and Make Y
+Given
+2 parameters
+X and
+Y and an array
+B of length
+M, define
+f(B,X)=(((XmodB
+1
+)modB
+2
+)…modB
+M
+).
+The array
+B is called good if it is possible to rearrange
+B in some way such that
+f(B,X)=Y.
+You are given an array
+A of length
+N, and
+2 parameters
+X and
+Y.
+Find all
+K such that the prefix of array
+A with length
+K is good, i.e.
+[A
+1
+,A
+2
+,…,A
+K
+] is good. Print these values of
+K in increasing order.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of multiple lines of input.
+The first line of each test case contains
+N,
+X and
+Y.
+The second line contains
+N integers -
+A
+1
+,A
+2
+,…,A
+N
+.
+Output Format
+For each test case, output the following:
+on the first line, output the number of prefixes that are good, say
+L.
+on the second line, output
+L integers,
+K
+1
+,
+K
+2
+,…,K
+L
+- where each
+K
+i
+is distinct and is the length of a good prefix. Further, the elements must be printed in ascending order, i.e.
+K
+i
+<K
+i+1
+.
+Constraints
+1≤T≤100
+1≤N≤400
+1≤A
+i
+,X≤5⋅10
+4
+0≤Y≤X
+The sum of
+N over all test cases does not exceed
+400.
+Sample 1:
+Input
+Output
+3
+5 10 2
+3 12 5 4 1
+1 2 2
+1
+4 7 0
+2 2 5 7
+1
+4 
+0
+2
+3 4
+Explanation:
+Test Case 1 :
+K=4 is good because we can rearrange
+B=[A
+1
+,A
+2
+,A
+3
+,A
+4
+]=[3,12,5,4] to
+[12,4,5,3]. We can verify
+((((10mod12)mod4)mod5)mod3)=2.
+Test Case 2 : There are no good prefixes.

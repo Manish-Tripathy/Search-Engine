@@ -1,0 +1,55 @@
+GCD to 1 (Hard)
+This is the hard version of the problem. The only difference between this and easy version is that you need to minimize the sum of matrix in this version
+Construct a matrix
+A of size
+N∗M such that the GCD of every row and column is
+1 and the sum of elements of matrix is minimized. The element must be
+2<=A
+i,j
+<=10
+9
+.
+If there are multiple answers possible, print any.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of single line of input.
+The first line of each test case contains two space-separated integers
+N and
+M — the number of rows and columns in the matrix, respectively.
+Output Format
+For each test case, print a matrix of size
+N∗M.
+Constraints
+1≤T≤10
+4
+2≤N,M≤3⋅10
+5
+The sum of
+N⋅M over all test cases won't exceed
+3⋅10
+5
+.
+Sample 1:
+Input
+Output
+2
+4 4
+2 3
+2 2 3 2
+3 2 2 2
+2 3 2 2
+2 2 2 3
+2 3 3
+3 2 2
+Explanation:
+In the first test case there are 4 rows and 4 columns
+GCD of 1st row = GCD(2,2,3,2) = 1
+GCD of 2nd row = GCD(3,2,2,2) = 1
+GCD of 3rd row = GCD(2,3,2,2) = 1
+GCD of 4th row = GCD(2,2,2,3) = 1
+GCD of 1st column = GCD(2,3,2,2) = 1
+GCD of 2nd column = GCD(2,2,3,2) = 1
+GCD of 3rd column = GCD(3,2,2,2) = 1
+GCD of 4th column = GCD(2,2,2,3) = 1
+The sum of the matrix is 36. It can be proven that there can not be any other matrix such that the GCD of every row and column is 1 and the sum is less than 36.

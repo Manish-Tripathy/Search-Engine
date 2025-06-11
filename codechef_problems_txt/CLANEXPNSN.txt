@@ -1,0 +1,145 @@
+Clan Expansion
+The island of Teliarganj is divided into
+N distinct territories ruled by several different clans, each having an unique integer between
+1 and
+N assigned to it.
+The island can be considered a linear place, with the
+i-th territory located next to the
+(i+1)-th one. The
+i-th territory is initially ruled by clan
+A
+i
+.
+Chef does not like this division of the island into several clans, and wants to unite the island by bringing all the territories under the rule of one single clan.
+To this end, he can choose exactly one clan and give its warriors super powers.
+With the help of these super powers, this clan’s warriors will be able to capture the territories of other clans.
+On each day, the clan will capture every territory that's adjacent to one already owned by them.
+Which clan should Chef bestow with super powers so that the entire island is conquered in the least amount of time?
+Find both the minimum time required, and the clan that achieves this minimum time. If multiple clans can conquer the island in minimum time, print the one with smallest value assigned to it (see the samples below for an example).
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Every test case contains two lines on Input.
+The first line of each test case contains one integer
+N — the number of territories.
+The next line contains
+N integers
+A
+1
+,A
+2
+,…,A
+N
+— meaning that the territory
+i is initially ruled by clan
+A
+i
+.
+Output Format
+For each test case, output on a new line two integers separated by a space.
+The first integer should be the clan that conquers the island in minimum time.
+If there are multiple, print the minimum among them.
+The second integer is the number of days this clan will take to do so.
+Constraints
+1≤T≤4⋅10
+4
+1≤N≤3⋅10
+5
+1≤A
+i
+≤N
+The sum of
+N over all test cases won't exceed
+3⋅10
+5
+.
+Sample 1:
+Input
+Output
+5
+8
+1 1 2 3 1 2 2 3
+5
+1 2 3 4 5
+5
+1 1 1 1 1
+7
+2 1 1 3 4 4 2
+8
+2 3 3 1 1 3 4 2
+2 2
+3 2
+1 0
+2 3
+3 2
+Explanation:
+Test case
+1: Initially, the territories are
+[1,1,2,3,1,2,2,3].
+If Chef chooses clan
+1, the progression looks like (underlined territories are the ones newly conquered on that day):
+Day 0:  [1,1,2,3,1,2,2,3]
+Day 1:  [1,1,
+1
+,
+1
+,1,
+1
+,2,3]
+Day 2:  [1,1,1,1,1,1,
+1
+,3]
+Day 3:  [1,1,1,1,1,1,1,
+1
+]
+If Chef chooses clan
+2, the progression is:
+Day 0:  [1,1,2,3,1,2,2,3]
+Day 1:  [1,
+2
+,2,
+2
+,
+2
+,2,2,
+2
+]
+Day 2:  [
+2
+,2,2,2,2,2,2,2]
+If clan
+3 is chosen, the progression is:
+Day 0:  [1,1,2,3,1,2,2,3]
+Day 1:  [1,1,
+3
+,3,
+3
+,2,
+3
+,3]
+Day 2:  [1,
+3
+,3,3,3,
+3
+,3,3]
+Day 3:  [
+3
+,3,3,3,3,3,3,3]
+Clan
+2 needs only
+2 days, while the rest need
+3 days.
+So, the answer is 2 2.
+Test case
+2: Clan
+3 can conquer the others in
+2 days, as
+[1,2,3,4,5]→[1,3,3,3,5]→[3,3,3,3,3]. This is the minimum possible.
+Test case
+3: Everything is already under the control of clan
+1.
+Test case
+4: Clans
+2 and
+3 can both conquer all the territories in
+3 days. Since we must choose the minimum clan number, we print 2 3 and not 3 3.

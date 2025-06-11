@@ -1,0 +1,112 @@
+Completion (Hard)
+This is the hard version of the problem. Here,
+P
+2i
+may or may not be zero.
+You are given a permutation
+†
+†
+P of the integers
+1 to
+2N, with some of its elements missing (represented by
+0's).
+Find the number of ways of filling in the zeros to obtain a valid permutation, such that the quantity
+∣
+∣P
+1
+−P
+2
+∣+∣P
+3
+−P
+4
+∣+…+∣P
+2N−1
+−P
+2N
+∣
+is maximized.
+The answer can be large, so find it modulo
+998244353.
+†
+†
+A permutation of the integers
+1 to
+N is an array of length
+N that contains every integer from
+1 to
+N exactly once.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of two lines of input.
+The first line of each test case contains a single integer
+N — meaning that
+P has length
+2N.
+The second line contains
+2N space-separated integers
+P
+1
+,P
+2
+,…,P
+2N
+.
+Output Format
+For each test case, output on a new line the number of ways of filling in the zeros to maximize the sum, modulo
+998244353.
+Constraints
+1≤T≤10
+5
+1≤N≤2⋅10
+5
+0≤P
+i
+≤2N
+All the non-zero elements of
+P are distinct.
+The sum of
+N over all test cases won't exceed
+2⋅10
+5
+.
+Sample 1:
+Input
+Output
+3
+4
+3 0 0 5 6 8 0 4
+2
+0 0 0 0
+3
+4 6 1 5 3 2
+2
+16
+1
+Explanation:
+Test case
+1: There are
+6 permutations we can form by filling in the zeros:
+[3,1,2,5,6,8,7,4] with a value of
+∣3−1∣+∣2−5∣+∣6−8∣+∣7−4∣=10.
+[3,1,7,5,6,8,2,4] with a value of
+∣3−1∣+∣7−5∣+∣6−8∣+∣2−4∣=8.
+[3,2,1,5,6,8,7,4] with a value of
+∣3−2∣+∣1−5∣+∣6−8∣+∣7−4∣=10.
+[3,2,7,5,6,8,1,4] with a value of
+∣3−2∣+∣7−5∣+∣6−8∣+∣1−4∣=8.
+[3,7,1,5,6,8,2,4] with a value of
+∣3−7∣+∣1−5∣+∣6−8∣+∣2−4∣=12.
+[3,7,2,5,6,8,1,4] with a value of
+∣3−7∣+∣2−5∣+∣6−8∣+∣1−4∣=12.
+The maximum possible value is
+12, and two permutations attain that maximum.
+Test case
+2: There are
+24 ways of filling in the zeros to obtain a permutation; of which it can be verified that
+16 of them attain the maximum possible value of
+4.
+Test case
+3: There are no zeros, so there's only one permutation (
+P itself) that attains the maximum value.

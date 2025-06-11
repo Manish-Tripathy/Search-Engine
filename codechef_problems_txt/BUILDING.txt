@@ -1,0 +1,18 @@
+ERROR: Message: 
+Stacktrace:
+0   chromedriver                        0x0000000100d16654 cxxbridge1$str$ptr + 2723108
+1   chromedriver                        0x0000000100d0e8c8 cxxbridge1$str$ptr + 2690968
+2   chromedriver                        0x0000000100862714 cxxbridge1$string$len + 90428
+3   chromedriver                        0x00000001008a97c0 cxxbridge1$string$len + 381416
+4   chromedriver                        0x00000001008eade8 cxxbridge1$string$len + 649232
+5   chromedriver                        0x000000010089d9c8 cxxbridge1$string$len + 332784
+6   chromedriver                        0x0000000100cda278 cxxbridge1$str$ptr + 2476360
+7   chromedriver                        0x0000000100cdd50c cxxbridge1$str$ptr + 2489308
+8   chromedriver                        0x0000000100cbba64 cxxbridge1$str$ptr + 2351412
+9   chromedriver                        0x0000000100cddd94 cxxbridge1$str$ptr + 2491492
+10  chromedriver                        0x0000000100cacd58 cxxbridge1$str$ptr + 2290728
+11  chromedriver                        0x0000000100cfdd60 cxxbridge1$str$ptr + 2622512
+12  chromedriver                        0x0000000100cfdeec cxxbridge1$str$ptr + 2622908
+13  chromedriver                        0x0000000100d0e514 cxxbridge1$str$ptr + 2690020
+14  libsystem_pthread.dylib             0x000000019479ac0c _pthread_start + 136
+15  libsystem_pthread.dylib             0x0000000194795b80 thread_start + 8

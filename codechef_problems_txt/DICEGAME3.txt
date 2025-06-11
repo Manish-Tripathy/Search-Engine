@@ -1,0 +1,45 @@
+Dice Game 3
+Chef is playing a game consisting of
+N rounds. In each round he rolls a regular six faced dice.
+He starts with an initial score of
+0. Let the number rolled by him in a particular round be
+X.
+If this is not the first round and the previous number rolled was
+1, Chef will add
+2⋅X to his score, otherwise he will add
+X to his score.
+For example, if the game has
+6 rounds and the rolls are
+[2,1,6,1,1,4] in the given order, his score will be
+2+1+(2⋅6)+1+(2⋅1)+(2⋅4)=26.
+Find the maximum possible score he can obtain after
+N rounds.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of a single integer
+N the number of rounds.
+Output Format
+For each test case, output on a new line the maximum score that Chef can get.
+Constraints
+1≤T≤10
+5
+1≤N≤10
+5
+Sample 1:
+Input
+Output
+2
+2
+4
+13
+26
+Explanation:
+Test case
+1: Chef can roll
+[1,6] and his score will be
+1+(2⋅6)=13.
+Test case
+2: Chef can roll
+[1,6,1,6] and his score will be
+1+(2⋅6)+1+(2⋅6)=26.

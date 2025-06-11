@@ -1,0 +1,101 @@
+Ball Distribution
+Chef has
+N empty boxes. There are
+M different colours numbered from
+1 to
+M such that Chef has
+A
+i
+balls of the
+i
+th
+colour.
+A distribution of these balls into boxes is said to be valid if:
+Each ball is placed in a box;
+All the balls in a box are of different colour.
+Over all valid distributions, find the minimum number of boxes having
+M balls.
+Under the given constraints, it is guaranteed that at least one valid distribution always exists.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of multiple lines of input.
+The first line of each test case contains two space-separated integers
+N and
+M — the number of empty boxes and the number of colours, respectively.
+The next line contains
+M space-separated integers,
+i
+th
+of which denotes
+A
+i
+i.e. the number of balls of colour
+i.
+Output Format
+For each test case, output on a new line, the minimum number of boxes with
+M balls in a valid distribution.
+Constraints
+1≤T≤100
+1≤N,M≤3⋅10
+5
+1≤A
+i
+≤N
+The sum of
+M over all test cases won't exceed
+3⋅10
+5
+.
+Sample 1:
+Input
+Output
+1
+5 3
+5 4 4
+3
+Explanation:
+There are
+5 boxes and
+3 different colours. A possible valid distribution such that number of boxes with
+M balls is minimum is:
+Box
+1 contains balls of colour
+1,2,3.
+Box
+2 contains balls of colour
+1,2,3.
+Box
+3 contains balls of colour
+1,2,3.
+Box
+4 contains balls of colour
+1,3.
+Box
+5 contains balls of colour
+1,2.
+We can see that boxes
+1,2,3 contain
+M balls, hence answer is
+3.
+Sample 2:
+Input
+Output
+1
+2 2
+1 1
+0
+Explanation:
+There are
+2 boxes and
+2 different colours. A possible valid distribution such that number of boxes with
+M balls is minimum is:
+Box
+1 contains ball of colour
+1.
+Box
+2 contains ball of colour
+2.
+We can see that no boxes contain
+M balls, hence answer is
+0.

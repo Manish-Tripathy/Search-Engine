@@ -1,0 +1,91 @@
+Stingy Arrays
+An array
+B is said to be stingy if no two of its adjacent elements are equal.
+That is,
+B is stingy iff
+B
+i
+
+=B
+i+1
+for each
+1≤i<∣B∣.
+Alice and Bob have an array
+A with them, and decided to play a game on it.
+They alternate turns, with Alice going first.
+On their turn, a player chooses any subsequence
+S of
+A, such that
+S is a maximum length stingy subsequence of
+A, and deletes it from
+A.
+The remaining elements don't change their order.
+This game continues as long as
+A is not empty, with the winner being the player who makes the last move.
+With optimal play, who wins?
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of a two lines of input.
+The first line contains a single integer
+N, the length of the array.
+The second line contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+: the elements of array
+A.
+Output Format
+For each test case, output on a new line the winner: either Alice or Bob.
+Each character of the output may be printed in either uppercase or lowercase, i.e, the strings BOB, Bob ,boB, and bob will all be treated as equivalent.
+Constraints
+1≤T≤10
+5
+1≤N≤3⋅10
+5
+1≤A
+i
+≤N
+The sum of
+N across all tests won't exceed
+3⋅10
+5
+.
+Sample 1:
+Input
+Output
+4
+4
+1 1 2 3
+4
+1 2 1 3
+4
+2 2 2 2
+6
+2 4 4 5 4 4
+Bob
+Alice
+Bob
+Alice
+Explanation:
+Test case
+1: Alice chooses the subsequence
+[1,2,3] on her turn and deletes it. The remaining array is
+[1], which Bob chooses and ends the game.
+Test case
+2: Alice can choose the entire array on her turn.
+Test case
+3: The only stingy subsequence is
+[2], so both players must repeatedly choose it. Bob makes the last move and wins.
+Test case
+4: Alice chooses the stingy subsequence
+[2,4,5,4] with indices
+(1,3,4,5) and deletes it. The remaining array is
+[4,4].
+Bob can only choose
+[4] now, leaving Alice with the array
+[4] which she can clear out and win.

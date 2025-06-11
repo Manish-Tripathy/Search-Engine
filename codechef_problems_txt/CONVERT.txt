@@ -1,0 +1,136 @@
+Binary Conversion
+You are given binary strings
+S and
+T, each of length
+N, and an integer
+K.
+Find whether it is possible to convert string
+S to
+T by making exactly
+K operations of the following type:
+Choose distinct indices
+i and
+j (1≤i,j≤N);
+Swap
+S
+i
+with
+S
+j
+.
+Input Format
+The first line of input will contain a single integer
+T
+′
+, denoting the number of test cases.
+Each test case consists of multiple lines of input.
+The first line of each test case contains two space-separated integers
+N and
+K — the length of the string and the number of operations, respectively.
+The second line contains the binary string
+S of length
+N.
+The third line contains the binary string
+T of length
+N.
+Output Format
+For each test case, output on a new line, YES, if it is possible to convert string
+S to
+T by making exactly
+K operations. Otherwise, output NO.
+You may print each character of the string in uppercase or lowercase (for example, the strings YES, yEs, yes, and yeS will all be treated as identical).
+Constraints
+1≤T
+′
+≤1200
+2≤N≤10
+5
+1≤K≤N
+S
+i
+,T
+i
+∈{0,1}
+The sum of
+N over all test cases won't exceed
+2⋅10
+5
+.
+Sample 1:
+Input
+Output
+4
+2 2
+01
+10
+2 2
+00
+01
+3 1
+001
+010
+4 2
+1101
+0111
+NO
+NO
+YES
+YES
+Explanation:
+Test case
+1: The only operation we can perform on
+S is swapping
+S
+1
+and
+S
+2
+. Thus, performing
+2 operations would convert
+S as
+01→10→01, which is not equal to
+T.
+Test case
+2: It is not possible to convert
+S to
+T using any number of operations.
+Test case
+3: We can convert string
+S=001 to
+T=010 using
+K=1 operation:
+Select indices
+i=2 and
+j=3 and swap
+S
+2
+and
+S
+3
+.
+Test case
+4: We can convert string
+S=1101 to
+T=0111 using
+K=2 operations:
+Select indices
+i=3 and
+j=4 and swap
+S
+3
+and
+S
+4
+to obtain
+1110.
+Select indices
+i=1 and
+j=4 and swap
+S
+1
+and
+S
+4
+to obtain
+0111, which is same as
+T.

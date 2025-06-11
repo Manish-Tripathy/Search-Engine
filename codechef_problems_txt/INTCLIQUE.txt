@@ -1,0 +1,140 @@
+Interval Cliques
+We have
+N intervals
+I
+1
+,I
+2
+,...,I
+N
+where
+I
+j
+=[L
+j
+,R
+j
+] meaning it contains all real numbers between
+L
+j
+and
+R
+j
+. It is guaranteed that all
+2⋅N endpoints of the intervals are distinct.
+Construct a graph of
+N nodes such that there is an edge between nodes
+X and
+Y if and only if the following 2 conditions are both satisfied :
+There exists at least one real number contained in
+I
+X
+but not in
+I
+Y
+There exists at least one real number contained in
+I
+Y
+but not in
+I
+X
+Find the maximum size of a clique
+†
+†
+in this constructed graph.
+†
+†
+Maximum size of a clique refers to the Clique Problem
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of multiple lines of input.
+The first line of each test case contains
+N - the number of intervals.
+The next
+N lines contain
+2 integers each -
+L
+j
+and
+R
+j
+, the left and right endpoints of the interval.
+Output Format
+For each test case, output on a new line the maximum clique size of the constructed graph
+Constraints
+1≤T≤10
+4
+1≤N≤2⋅10
+5
+1≤L
+j
+≤R
+j
+≤2⋅N
+All the
+2⋅N points
+L
+j
+and
+R
+j
+are distinct
+The sum of
+N over all test cases does not exceed
+2⋅10
+5
+.
+Sample 1:
+Input
+Output
+3
+3
+1 4
+2 3
+5 6
+5
+1 9
+2 4
+3 7
+5 6
+8 10
+1
+1 2
+2
+3
+1
+Explanation:
+Test case 1 :
+The edges present in the graph are
+(1,3) and
+(2,3) but the edge
+(1,2) is not present.
+Edge
+(1,3) is present because
+1.5 is a real number belonging to
+I
+1
+but not
+I
+3
+5.71 is a real number belonging to
+I
+3
+but not
+I
+1
+.
+Edge
+(1,2) is not present because
+There does not exist a real number belonging to
+I
+2
+but not
+I
+1
+.
+The maximum clique size in this graph is formed by taking the subset
+(1,3) or the subset
+(2,3) both of which have size
+2.

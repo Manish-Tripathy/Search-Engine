@@ -1,0 +1,104 @@
+Reverse and Alternate
+A binary string
+S of length
+N is said to be almost alternating if it can be converted into an alternating
+†
+†
+string by performing the following operation at most once:
+Choose two indices
+L and
+R (
+1≤L≤R≤N).
+Then, reverse the substring of
+S from
+L to
+R.
+After this operation,
+S will look like
+S
+1
+S
+2
+…S
+L−1
+S
+R
+S
+R−1
+…S
+L+1
+S
+L
+S
+R+1
+…S
+N
+.
+For example, if
+S=10110110, choosing
+L=3,R=6 will result in
+S=10
+1011
+10, with the reversed substring underlined.
+You are given a binary string
+S. Is it almost alternating?
+†
+†
+A binary string is said to be alternating if no two adjacent characters are equal. For example,
+0,101, and
+01010 are examples of alternating strings, while
+00 and
+1010110110 are not.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of two lines of input.
+The first line of each test case will contain a single integer
+N, the length of
+S.
+The second line will contain the binary string
+S.
+Output Format
+For each test case, output on a new line the answer: either Yes or No depending on whether
+S is almost alternating or not.
+Each letter of the output may be printed in either uppercase or lowercase, i.e, the strings No, no, NO, and nO will all be treated as equivalent.
+Constraints
+1≤T≤10
+5
+1≤N≤2⋅10
+5
+S
+i
+∈{0,1}
+The sum of
+N over all test cases won't exceed
+2⋅10
+5
+.
+Sample 1:
+Input
+Output
+4
+4
+0011
+5
+10001
+5
+01010
+4
+1001
+Yes
+No
+Yes
+Yes
+Explanation:
+Test case
+1: Choosing
+L=2,R=3 will result in
+S=0101, which is alternating.
+Test case
+2: It can be shown that no matter what, a single reversal cannot make
+S alternating.
+Test case
+3:
+S is already alternating.

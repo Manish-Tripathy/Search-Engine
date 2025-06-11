@@ -1,0 +1,60 @@
+Swaps in a String
+You are given a string
+S that contains of the characters
+A,
+B or
+C only.
+In one operation, you can do either of the following:
+Choose an occurrence of
+AB in the string, convert it to
+BA.
+Choose an occurrence of
+BC in the string, convert it to
+CB.
+Note that you are only allowed to operate on adjacent elements.
+Find the maximum number of operations you can do. It can be proven the answer is finite.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of multiple lines of input.
+The first line of each test case contains
+N - the length of the string.
+The second line contains
+S - the string.
+Output Format
+For each test case, output on a new line the maximum number of operations possible.
+Constraints
+1≤T≤10
+4
+2≤N≤2⋅10
+5
+∣S∣=N
+S
+i
+∈{A,B,C}
+The sum of
+N over all test cases does not exceed
+2⋅10
+5
+.
+Sample 1:
+Input
+Output
+3
+4
+ABCC
+5
+BAABB
+2
+BA
+2
+4
+0
+Explanation:
+Test Case 1 : We can convert
+ABCC to
+ACBC and then to
+ACCB. More than
+2 operations can be proven to be impossible.
+Test Case 2 :
+BAABB→BABAB→BBAAB→BBABA→BBBAA.

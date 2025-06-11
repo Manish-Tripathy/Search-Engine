@@ -1,0 +1,162 @@
+Balance Difficulties
+Suppose a contest has
+N problems, with difficulties
+A
+1
+,A
+2
+,...,A
+N
+, and we have a parameter
+X. The contest is said to be balanced if and only if the following conditions hold :
+A
+i
+≥A
+i−1
+for all
+2≤i≤N, i.e. the problems are sorted in difficulty order.
+A
+i
+−A
+i−1
+≤X for all
+2≤i≤N, i.e. the difficulties between
+2 adjacent problems differ by at most
+X.
+Right now, your contest has problems of difficulties
+B
+1
+,B
+2
+,...,B
+N
+. You sorted them in difficulty order, so
+B
+i
+≥B
+i−1
+holds.
+You want to modify the problems to ensure that the contest becomes balanced. Suppose the final contest difficulties were
+C
+1
+,C
+2
+,...,C
+N
+. Then, the cost of this contest is
+max
+i=1
+N
+(∣C
+i
+−B
+i
+∣). Minimize the cost while achieving a balanced contest. It can be proven that a balanaced contest always exists. Please note that problems are even allowed to have negative difficulties.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of multiple lines of input.
+The first line of each test case contains
+N and
+X - the size of the array and the parameter.
+The second line contains
+N integers -
+B
+1
+,B
+2
+,...,B
+N
+Output Format
+For each test case,
+output on a new line :
+K the minimum cost of a balanced contest
+output on the next line :
+N integers,
+C
+1
+,C
+2
+,...,C
+N
+representing a balanced contest acheiveing the minimum cost
+K. The following conditions should hold for
+C :
+−2⋅10
+9
+≤C
+i
+≤2⋅10
+9
+C
+i
+≥C
+i−1
+C
+i
+−C
+i−1
+≤X
+If several such contests exists, output any.
+Constraints
+1≤T≤10
+4
+1≤N≤2⋅10
+5
+1≤B
+i
+,X≤10
+9
+B
+i
+≥B
+i−1
+The sum of
+N over all tests does not exceed
+3⋅10
+5
+Sample 1:
+Input
+Output
+3
+3 2
+5 9 10
+4 1
+2 8 10 12
+1 10
+1
+1
+6 8 10
+4
+6 7 8 9
+0
+1
+Explanation:
+Test Case 1 :
+C=[6,8,10] are valid contest difficulties because
+C
+1
+≤C
+2
+≤C
+3
+,
+C
+2
+−C
+1
+=2≤K and
+C
+3
+−C
+2
+=2≤K.
+Further, the cost of this array is
+1 as the maximum value of
+∣C
+i
+−B
+i
+∣ is
+1.
+Test case 3 : The array represents an already valid contest.

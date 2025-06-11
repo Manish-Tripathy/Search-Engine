@@ -1,0 +1,87 @@
+Asymmetric Cookies
+Alice and Bob have
+N jars of cookies with them. The
+i-th jar has
+A
+i
+(
+1≤A
+i
+≤3) cookies.
+They'll take turns eating the cookies, with Alice going first.
+However, they eat cookies in different ways.
+On her turn, Alice will choose any jar that contains at least one cookie, and eat one cookie from it.
+On his turn, Bob will choose any jar that contains at least one cookie, and:
+If the jar contains three cookies, he'll eat two of them.
+Otherwise, he'll eat only one.
+Whoever eats the last cookie is considered the winner.
+Alice and Bob are both aiming to win, and will play optimally to achieve this.
+Alice has
+N possible first moves, each corresponding to choosing a different jar.
+How many of them are winning?
+That is, how many of Alice's first moves result in a state where Bob has no winning strategy?
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of two lines of input.
+The first line of each test case contains a single integer
+N — the number of cookie jars.
+The second line contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+– the number of cookies in each jar.
+Output Format
+For each test case, output on a new line a single integer: the number of winning first moves of Alice.
+Constraints
+1≤T≤10
+5
+1≤N≤2⋅10
+5
+1≤A
+i
+≤3
+The sum of
+N over all test cases won't exceed
+2⋅10
+5
+.
+Sample 1:
+Input
+Output
+3
+2
+1 2
+3
+1 2 1
+3
+1 3 1
+2
+0
+1
+Explanation:
+Test case
+1: Initially,
+A=[1,2]. Alice has two possible first moves, and they both win:
+If Alice chooses the first jar, the counts become
+[0,2].
+Bob is forced to choose the second jar to make the counts
+[0,1], and then Alice can take the last cookie and win.
+If Alice chooses the second jar, the counts become
+[1,1].
+Whichever jar Bob chooses, Alice can then choose the other one and win.
+Test case
+2: It can be shown that no matter what Alice does, she cannot win. So, there are
+0 winning starting moves.
+Test case
+3: Alice has three possible starting moves. However, only one of them is winning.
+If Alice chooses the first jar, Bob can then choose the second jar resulting in
+[0,1,1] which Alice cannot win.
+If Alice chooses the second jar, resulting in
+[1,2,1], Bob cannot win no matter what.
+If Alice chooses the third jar, Bob can again choose the second jar resulting in
+[1,1,0] which Alice cannot win.

@@ -1,0 +1,106 @@
+GCD Summation
+For an array
+A of length
+N, we define
+f(A) to be the sum of GCDs of its adjacent elements, i.e.
+f(A)=
+i=1
+∑
+N−1
+gcd(A
+i
+,A
+i+1
+)
+You are given two integers
+N and
+K.
+Find any array
+A of length
+N, consisting of distinct integers between
+1 and
+10
+9
+, such that
+f(A)=K.
+If multiple valid arrays exist, you may find any of them.
+If no valid arrays exist, print
+−1 instead.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+The first and only line of each test case contains two space-separated integers
+N and
+K – the length of the array and the required value of
+f(A), respectively.
+Output Format
+For each test case, on a new line:
+If no valid array exists, print the single integer
+−1.
+Otherwise, output
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+, representing the array you found.
+Each
+A
+i
+should be an integer between
+1 and
+10
+9
+, and
+f(A)=K must hold. The elements of
+A must be pairwise distinct, i.e.
+A
+i
+
+=A
+j
+for
+i
+
+=j.
+If there are multiple valid arrays, you may find any of them.
+Constraints
+1≤T≤10
+5
+2≤N≤2⋅10
+5
+1≤K≤10
+6
+The sum of
+N over all test cases won't exceed
+2⋅10
+5
+.
+Sample 1:
+Input
+Output
+3
+3 5
+5 3
+5 18
+15 54 8
+-1
+9 210 72 30 57
+Explanation:
+Test case
+1: We have
+A=[15,54,8], for which
+f(A)=gcd(15,54)+gcd(54,8)=3+2=5, as required.
+Test case
+2: It can be proved that there does not exist any array of length
+5, with distinct integers between
+1 and
+10
+9
+, such that the sum of adjacent GCDs equals
+3.
+Test case
+3: We have
+f(A)=gcd(9,210)+gcd(210,72)+gcd(72,30)+gcd(30,57)=3+6+6+3=18.

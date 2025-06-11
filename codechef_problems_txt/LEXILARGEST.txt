@@ -1,0 +1,116 @@
+Lexicographically Largest
+You are given a positive integer
+M and an array
+A (1≤A
+i
+≤M) consisting of
+N positive integers.
+Find the lexicographically largest array
+B such that:
+∣B∣=N;
+1≤B
+i
+≤M for all
+1≤i≤N;
+A
+i
+=gcd(B
+1
+,B
+2
+,…,B
+i
+), where
+gcd denotes the greatest common divisor.
+Note that the input
+A guarantees that
+B always exists.
+For two arrays
+X and
+Y, both of size
+N, the array
+X is said to be lexicographically larger than array
+Y, if, in the first position where
+X and
+Y differ,
+X
+i
+>Y
+i
+.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of multiple lines of input.
+The first line of each test case contains two space separated integers
+N and
+M — the length of array
+A and upper bound on array elements.
+The next line contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+representing the array
+A.
+Output Format
+For each test case, output on a new line, the lexicographically largest array
+B, satisfying the given conditions.
+Constraints
+1≤T≤10
+4
+1≤N≤10
+4
+1≤M≤10
+9
+1≤A
+i
+≤M
+The sum of
+N over all test cases won't exceed
+5⋅10
+4
+.
+Sample 1:
+Input
+Output
+4
+1 1
+1
+2 2
+2 1
+4 3
+2 2 2 2
+4 5
+2 2 2 2
+1
+2 1
+2 2 2 2
+2 4 4 4
+Explanation:
+Test case
+1: The only possible array is
+B=[1] which satisfies the given conditions.
+Test case
+2: The only possible array is
+B=[2,1] which satisfies the given conditions.
+Here
+A
+1
+=B
+1
+=2, and
+A
+2
+=gcd(B
+1
+,B
+2
+)=1.
+Test case
+4: The lexicographically largest valid array is
+B=[2,4,4,4]. Some other arrays that are valid include
+[2,2,2,2],[2,2,4,2],[2,2,4,4].

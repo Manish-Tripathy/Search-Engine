@@ -1,0 +1,76 @@
+Bloodline
+No, we won't be talking the next day
+I ain't got nothin' to say (Hell nah)
+I ain't lookin' for my one true love
+Yeah, that ship sailed away
+Shivansh and Tina are playing a game. The players move in alternating turns with Shivansh starting first.
+They have integers
+N and
+K. In one move, a player has to:
+Choose any non-negative integer
+X such that
+K
+X
+≤N;
+Subtract
+K
+from
+N.
+The player who cannot make a move loses. If both players play optimally, find the winner of the game.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case contains two space-separated integers
+N and
+K — as mentioned in the statement.
+Output Format
+For each test case, output on a new line Shivansh if Shivansh wins the game, otherwise Tina.
+You may print each character of the string in uppercase or lowercase (for example, the strings Tina, TINA, tina, and TiNa will all be treated as identical).
+Constraints
+1≤T≤10
+5
+0≤N≤10
+9
+2≤K≤10
+9
+Sample 1:
+Input
+Output
+3
+2 2
+4 3
+0 10000
+Shivansh
+Tina
+Tina
+Explanation:
+Test case
+1:
+Shivansh chooses
+X=1 and subtracts
+2
+1
+from
+2 to get
+0.
+Since Tina cannot make a move now, Shivansh wins.
+Test case
+2:
+Shivansh chooses
+X=1 and subtracts
+3
+1
+from
+4 to get
+1.
+Tina chooses
+X=0 and subtracts
+3
+0
+from
+1 to get
+0.
+Since Shivansh cannot make a move now, Tina wins.
+Test case
+3: Shivansh cannot reduce the number further, it is already
+0, so he loses.

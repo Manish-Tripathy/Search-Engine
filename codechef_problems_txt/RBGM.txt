@@ -1,0 +1,160 @@
+Red-Blue Sort
+You are given a permutation
+†
+†
+P of the integers
+1 to
+N.
+You can perform the following three-step operation on it as many times as you like (possibly, zero):
+First, choose any subset
+S of indices of
+P, whose size is between
+1 and
+N−1. (That is,
+S should not be the empty set or the entirety of
+{1,2,…,N}.)
+Note that
+S is a subset, so it need not consist of contiguous elements.
+Then, paint all the elements at indices of
+S red, and all the elements at indices that are not in
+S blue.
+Finally, place all the red elements at indices of
+S in ascending order, and blue elements at indices outside
+S in descending order.
+Performing this operation costs one coin.
+For example, suppose
+P=[1,3,4,2,5]. Suppose you choose the set of indices
+{2,4,5}. Then,
+Indices
+2,4,5 are painted red, and indices
+1,3 are painted blue.
+Red elements (
+P
+2
+=3 and
+P
+4
+=2,P
+5
+=5) are sorted in ascending order at placed at indices
+2,4,5, while blue elements (
+P
+1
+=1,P
+3
+=4) are sorted in descending order and placed at indices
+1,3.
+This turns
+P into
+[4,2,1,3,5].
+After performing all the operations you wish to perform, you will receive one coin for every index
+i such that
+P
+i
+=i.
+What's the maximum profit you can earn, if you perform operations optimally?
+Here, profit means the number of coins you receive, minus the number of coins you spent on operations.
+†
+†
+A permutation of the integers
+1 to
+N is an array of length
+N containing each integer from
+1 to
+N exactly once. For example, if
+N=3,
+[2,1,3] and
+[3,2,1] are permutations, but
+[2,1,4] and
+[1,2,2] are not.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of two lines of input.
+The first line of each test case contains a single integer
+N — the size of the permutation.
+The second line contains
+N space-separated integers
+P
+1
+,P
+2
+,…,P
+N
+.
+Output Format
+For each test case, output on a new line the maximum number of coins you can obtain as profit.
+Constraints
+1≤T≤10
+5
+2≤N≤3⋅10
+5
+1≤P
+i
+≤N
+P
+i
+
+=P
+j
+for
+i
+
+=j
+The sum of
+N over all test cases won't exceed
+3⋅10
+5
+.
+Sample 1:
+Input
+Output
+3
+2
+1 2
+2
+2 1
+5
+3 1 4 2 5
+2
+0
+4
+Explanation:
+Test case
+1: We don't need to perform any operation: already
+P
+1
+=1 and
+P
+2
+=2 will hold, so we receive two coins and don't pay anything, for a total profit of
+2.
+Test case
+2: It's optimal to not perform any operation, we'll receive
+0 coins but also pay
+0, for a net profit of
+0.
+Test case
+3: Choose
+S={1,2,3,4}. Then,
+The elements
+{P
+1
+,P
+2
+,P
+3
+,P
+4
+} will be placed in ascending order at indices
+1,2,3,4.
+The element
+P
+5
+will be placed at index
+5.
+The resulting permutation is
+P=[1,2,3,4,5].
+We receive
+5 coins for this, and paid one - so net profit of
+5−1=4. This is optimal.

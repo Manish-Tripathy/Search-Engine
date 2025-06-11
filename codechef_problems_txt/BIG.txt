@@ -1,0 +1,91 @@
+Big Achiever
+Given
+N students standing in a row, each student
+i has an distinct achievement score
+A
+i
+provided in an array
+A=[A
+1
+,A
+2
+,…,A
+n
+]. The array
+A consists of distinct integers from
+1 to
+N.
+A student
+i (
+1≤i≤N ) will be happy if their achievement score
+A
+i
+is greater than the achievement scores of all the students standing before them in the array.
+The task is to print whether a student is happy or not.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of two lines of input.
+The first line of each test case contains
+N — the number of students.
+The second line of each test case contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+, denoting the achievement scores of the students.
+Output Format
+For each test case, print a single line containing
+N integers. Print
+i
+th
+integer as
+1 if the
+i
+th
+student is happy, otherwise print
+0.
+Each test case's output should be on a new line, with the integers separated by spaces.
+Constraints
+1≤T≤4×10
+5
+1≤N≤10
+1≤A
+i
+≤N
+The sum of
+N over all test cases does not exceed
+4×10
+5
+.
+Sample 1:
+Input
+Output
+2
+5
+3 1 2 4 5
+4
+1 2 3 4
+1 0 0 1 1
+1 1 1 1
+Explanation:
+Test Case 1:
+There is no student behind student
+1, so he is happy.
+For student
+2, there is student
+1 with greater achievement score, so he is not happy.
+Similarly for student
+3, there is student
+1 with greater score, so he is not happy.
+Student
+4 has greater achievement score than student
+1, student
+2, and student
+3, so student
+4 is happy.
+Student
+5 has greater score than all other students, so he is happy.

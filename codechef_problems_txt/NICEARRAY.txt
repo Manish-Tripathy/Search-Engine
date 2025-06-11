@@ -1,0 +1,115 @@
+Nice Array
+You're given an array
+A of length
+N, and an integer
+K.
+A is said to be a nice array if there exists an array
+B of length
+N satisfying the following conditions:
+For every index
+i (
+1≤i≤N),
+B
+i
+=⌊
+K
+A
+i
+⌋, or
+B
+i
+=⌈
+K
+A
+i
+⌉; and
+B
+1
++B
+2
++…+B
+N
+=0.
+Is
+A a nice array?
+Note that
+⌊  ⌋ and
+⌈  ⌉ denote the floor and ceiling functions, respectively.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of two lines of input.
+The first line of each test case contains two space-separated integers
+N and
+K — the length of array
+A and the division parameter.
+The second line contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+— the elements of the array
+A.
+Output Format
+For each test case, output on a new line a single string denoting the answer: "YES" if
+A is a nice array, and "NO" otherwise (without quotes).
+Each character of the output may be printed in either uppercase or lowercase, i.e., the strings NO, No, nO, and no will all be treated as equivalent.
+Constraints
+1≤T≤10
+5
+1≤N≤10
+5
+1≤K≤10
+9
+−10
+9
+≤A
+i
+≤10
+9
+It's guaranteed that the sum of
+N across all tests won't exceed
+2⋅10
+5
+.
+Sample 1:
+Input
+Output
+4
+4 2
+2 4 -2 -4
+2 3
+5 -6
+2 1
+-1 2
+2 2
+-1 2
+YES
+YES
+NO
+YES
+Explanation:
+Test case
+1: Choose
+B=[1,2,−1,2], which satisfies
+B
+i
+=⌊
+K
+A
+i
+⌋ for all
+i. The sum of this array is
+0, so
+A is nice.
+Test case
+3: No valid
+B exists, so
+A isn't nice.
+Test case
+4:
+B=[−1,1] is a valid array, so
+A is nice.

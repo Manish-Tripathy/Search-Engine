@@ -1,0 +1,76 @@
+Replace With First Literally
+You are given two strings,
+S and
+T, of lengths
+N and
+M respectively.
+You can perform the following operation on the string
+S:
+Replace a substring with its first character. (i.e. “abcabc” -> “abcc”)
+What is the minimum number of operations to make both of the strings equal? Or determine that it is impossible to make both of the strings equal.
+Input Format
+The first line of input contains a single integer
+T denoting the number of testcases.
+The first line of each testcase consists of two space-separated integers
+N and
+M denoting the lengths of the strings
+S and
+T, respectively.
+The second line of each testcase contains the string
+S of length
+N.
+The third line of each testcase contains the string
+T of length
+M.
+Output Format
+For each testcase, output a single line containing a single integer denoting the minimum number of operations to make the strings equal, or
+−1 if it is not possible to do so.
+Constraints
+1≤T≤10
+3
+1≤N,M≤2⋅10
+3
+Both strings
+S and
+T consists of lowercase English alphabets only.
+The sum of
+N over all testcases won't exceed
+2⋅10
+3
+.
+The sum of
+M over all testcases won't exceed
+2⋅10
+3
+.
+Sample 1:
+Input
+Output
+3
+4 3
+aabc
+aab
+8 8
+accepted
+accapted
+1 1
+z
+z
+1
+-1
+0
+Explanation:
+Testcase
+1:
+You can make
+S equal to
+T using one operation on
+S: "aabc" -> "aab"
+Testcase
+2:
+It is impossible to make
+S equal to
+T using the operation.
+Testcase
+3:
+Both strings are already equal.

@@ -1,0 +1,64 @@
+Largest K
+You are given integers
+X and
+Y
+(2≤X,Y≤10
+9
+).
+Find the largest integer
+K such that there exists a binary string
+S, where:
+The count of
+0s in
+S is
+X;
+The count of
+1s in
+S is
+Y;
+There are atleast
+K
+1s between any two occurrences of
+0s in
+S.
+Input Format
+The first line contains a single integer
+T, denoting the number of test cases.
+The first line of each test case contains two integers
+X and
+Y
+− the number of
+0s and
+1s in
+S.
+Output Format
+For each test case, output on a new line, the largest integer
+K, such that a binary string satisfies given conditions.
+Constraints
+1≤T≤10
+5
+2≤X,Y≤10
+9
+Sample 1:
+Input
+Output
+3
+2 10
+3 2
+10 5
+10
+1
+0
+Explanation:
+Test case
+1: The ideal binary string would be
+011111111110 with
+10 occurrences of
+1 between two
+0s.
+Test case
+2: The ideal binary string would be
+01010 with at least
+1 occurrence of
+1 between any two
+0s.

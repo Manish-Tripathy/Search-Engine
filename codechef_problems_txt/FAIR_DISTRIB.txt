@@ -1,0 +1,134 @@
+Fair Distribution
+A mother bought a set of
+N toys for her
+2 kids, Alice and Bob. She has already decided which toy goes to whom, however she has forgotten the monetary values of the toys. She only remembers that she ordered the toys in ascending order of their value. The prices are always non-negative.
+A distribution is said to be fair when no matter what the actual values were, the difference between the values of the toys Alice got, and the toys Bob got, does not exceed the maximum value of any toy.
+Formally, let
+v
+i
+be the value of
+i-th toy, and
+S be a binary string such that
+S
+i
+=1 if the toy is to be given to Alice, and
+S
+i
+=0 if the toy is to be given to Bob.
+Then, the distribution represented by
+S is said to be fair if, for all possible arrays
+v satisfying
+0≤v
+1
+≤v
+2
+≤....≤v
+N
+,
+∣
+∣
+i=1
+∑
+N
+v
+i
+⋅[s
+i
+=1]−
+i=1
+∑
+N
+v
+i
+⋅[s
+i
+=0]
+∣
+∣
+≤v
+N
+where
+[P] is
+1 iff
+P is true, and
+0 otherwise.
+You are given the binary string
+S representing the distribution.
+Print YES if the given distribution is fair, and NO otherwise.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of two lines of input.
+The first line of each test case contains a single integer
+N, the number of toys.
+The second line of each test case contains a binary string
+S of length
+N.
+Output Format
+For each test case, output on a new line the answer: YES or NO depending on whether
+S represents a fair distribution or not.
+Each character of the output may be printed in either lowercase or uppercase, i.e, the strings NO, no, nO, and No will all be treated as equivalent.
+Constraints
+1≤T≤10
+4
+1≤N≤10
+5
+The sum of
+N over all test cases won't exceed
+3⋅10
+5
+.
+S is a binary string of length
+N.
+Sample 1:
+Input
+Output
+6
+1
+1
+2
+00
+4
+1010
+4
+1100
+6
+010101
+5
+00001
+YES
+NO
+YES
+NO
+YES
+NO
+Explanation:
+Test case
+1: The given formula reduces to
+∣v
+1
+∣≤v
+1
+, which is true since
+v
+1
+≥0.
+Test case
+2: The distribution is not fair for
+v
+1
+=v
+2
+=1, hence the answer is NO.
+Note that the distribution is fair for
+v
+1
+=v
+2
+=0, but we need to check if its fair for all possible
+v satisfying the constraints.
+Test case
+3: It can be proved that the distribution is always fair.
+Test case
+4: The distribution is not fair for
+v=[1,2,4,8].

@@ -1,0 +1,188 @@
+Overwrite
+You are given two arrays
+A and
+B, of lengths
+N and
+M respectively (
+M≤N).
+All the elements of
+A are distinct, and all the elements of
+B are distinct — that is,
+A
+i
+
+=A
+j
+for
+i
+
+=j, and
+B
+i
+
+=B
+j
+for
+i
+
+=j.
+In one operation, you can do the following:
+Choose a subarray
+†
+†
+of
+A with length
+M, and replace it with a cyclic rotation
+‡
+‡
+of the array
+B.
+For instance, if
+A=[3,2,5,4,6] and
+B=[2,1,3], you can choose to replace the subarray
+[2,5,4] of
+A with the array
+[3,2,1] which is a cyclic shift of
+B, to obtain
+[3,3,2,1,6].
+Your task is to find the lexicographically minimum possible array
+A that can be obtained by performing this operation several (possibly, zero) times.
+An array
+P of length
+N is lexicographically smaller than another array
+Q of the same length if and only if there exists an index
+i (
+1≤i≤N) such that:
+P
+i
+<Q
+i
+; and
+P
+j
+=Q
+j
+for all
+1≤j<i
+†
+†
+A subarray of an array is obtained by deleting some (possibly zero) elements from its prefix and some (possibly zero) elements from its suffix.
+For example, if
+A=[1,3,4,2] then
+[1],[3,4,2], and
+[1,3] are some of its subarrays; whereas
+[1,4] is not a subarray of
+A.
+‡
+‡
+A cyclic rotation of an array is obtained by repeatedly moving its first element to its end, zero or more times.
+For example, the cyclic rotations of
+[1,3,4,2] are
+[1,3,4,2],[3,4,2,1],[4,2,1,3],[2,1,3,4].
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of three lines of input.
+The first line of each test case contains two space-separated integers
+N and
+M — the lengths of the arrays
+A and
+B, respectively.
+The second line contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+— the elements of array
+A.
+The third line contains
+M space-separated integers
+B
+1
+,B
+2
+,…,B
+M
+— the elements of array
+B.
+Output Format
+For each test case, output on a new line
+N space-separated integers, denoting the lexicographically minimum array
+A that can be obtained by performing the given operation several times.
+Constraints
+1≤T≤10
+5
+1≤M≤N≤2⋅10
+5
+1≤A
+i
+,B
+i
+≤2N
+A
+i
+
+=A
+j
+for
+i
+
+=j
+B
+i
+
+=B
+j
+for
+i
+
+=j
+The sum of
+N over all test cases won't exceed
+2⋅10
+5
+.
+Sample 1:
+Input
+Output
+3
+3 1
+4 1 6
+2
+4 2
+1 2 3 4
+5 3
+4 3
+2 3 7 1
+4 3 6
+2 1 2
+1 2 3 4
+2 3 6 4
+Explanation:
+Test case
+1: Perform these two operations:
+Replace subarray
+[4] of
+A with
+[2], to obtain
+[2,1,6].
+Replace subarray
+[6] of
+A with
+[2], to obtain
+[2,1,2].
+This is the lexicographically smallest array that can be obtained.
+Test case
+2: It's optimal to not perform any moves.
+Test case
+3: Perform one operation:
+Replace subarray
+[3,7,1] of
+A with
+[3,6,4] (which is a cyclic rotation of
+B) to obtain
+[2,3,6,4].
+This is optimal.

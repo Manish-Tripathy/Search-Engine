@@ -1,0 +1,106 @@
+Make Bob Win
+Alice and Bob are playing a game. They have with them a binary string
+S.
+Alice and Bob alternate making moves, with Alice going first.
+On their turn, a player does the following:
+Choose a non-empty contiguous substring of
+S all of whose characters are the same, delete it from
+S, and concatenate the remaining parts.
+More formally, choose integers
+L and
+R such that
+1≤L≤R≤∣S∣ and
+S
+L
+=S
+L+1
+=…=S
+R
+, and replace
+S with the string
+S
+1
+S
+2
+…S
+L−1
+S
+R+1
+S
+R+2
+…S
+∣S∣
+.
+This reduces the length of
+S by
+R−L+1.
+Alice wins immediately when
+S doesn't contain any occurrence of
+1, while Bob wins immediately when
+S doesn't contain any occurrence of
+0. Both players will play to win.
+Note that if the string initially doesn't contain any occurrences of
+0, Bob wins before any moves are made.
+Bob wants to win the game, so before the game starts, he can flip some characters of
+S.
+That is, Bob can choose an index
+i (
+1≤i≤N), and set
+S
+i
+to
+0 if it was originally
+1, and vice versa.
+Find the minimum number of flips Bob needs to make to ensure he can win.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of two lines of input.
+The first line of each test case contains one integer
+N — the length of
+S.
+The second line contains the binary string
+S.
+Output Format
+For each test case, output on a new line the minimum number of flips required in
+S to make Bob win.
+Constraints
+1≤T≤10
+5
+1≤N≤2⋅10
+5
+S is a binary string, i.e, contains only the characters
+0 and
+1.
+The sum of
+N over all test cases won't exceed
+2⋅10
+5
+.
+Sample 1:
+Input
+Output
+3
+1
+0
+3
+111
+6
+011001
+1
+0
+1
+Explanation:
+Test case
+1: Bob changes the only character of
+S, resulting in
+S=1.
+There are no
+0's in this string, so Bob wins automatically.
+Test case
+2: There are no
+0's in the string, so Bob wins without having to change anything.
+Test case
+3: Bob can flip the first character of the string, turning it into
+111001.
+It can be shown that if the game is played on this string, Bob will win; whereas he would lose if the game is played on the initial string.

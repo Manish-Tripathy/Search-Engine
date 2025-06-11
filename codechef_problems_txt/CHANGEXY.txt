@@ -1,0 +1,57 @@
+Change A to B
+You are given positive integers
+A,B, and
+K.
+For a variable
+x with an initial value
+A, you need to achieve the target value
+B. In one operation, you can:
+Either change
+x to
+x+1, or
+Change
+x to
+K⋅x.
+Find the minimum number of operations needed to go from
+x=A to
+x=B.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case contains three space-separated integers
+A,B,K — the initial and target values of the variable
+x and the constant.
+Output Format
+For each test case, output on a new line, the minimum number of operations needed to go from
+x=A to
+x=B.
+Constraints
+1≤T≤10
+4
+1≤A<B≤10
+9
+2≤K≤10
+9
+Sample 1:
+Input
+Output
+4
+1 8 2
+3 8 2
+3 7 2
+1 1000000000 900000000
+3
+2
+2
+100000001
+Explanation:
+Test case
+1 : We can use the second type of operation thrice to get
+A=1→2→4→8=B.
+Test case
+2 : We can use the first type of operation to get
+x=4 and then the second operation to get
+x=2⋅4=8=B.
+Test case
+3 : Second operation and then the first operation yields
+3→6→7.

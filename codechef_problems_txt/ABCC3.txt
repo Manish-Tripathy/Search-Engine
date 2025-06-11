@@ -1,0 +1,102 @@
+ABC Conjecture 3
+You are given a string
+S of length
+N, containing only the characters a, b, and c.
+In one move, you can modify
+S as follows:
+Choose three indices
+i,j,k (
+1≤i<j<k≤∣S∣) such that
+S
+i
+=a,S
+j
+=b,S
+k
+=c.
+That is, choose some subsequence of
+S that equals abc.
+Then, delete either the a or the c from
+S, that is, either index
+i or index
+k.
+Note that this reduces the length of
+S by
+1.
+For example, if
+S=cbb
+a
+c
+b
+a
+c
+c, you can choose
+i=4,j=6,k=8 (the underlined indices), and then delete either index
+4 (obtaining
+S=cbbcbacc) or index
+8 (obtaining
+S=cbbacbac).
+Find the minimum number of moves that can be made on
+S, such that it's impossible to perform any further moves on the resulting string.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of two lines of input.
+The first line of each test case contains a single integer
+N — the length of
+S.
+The second line of each test case contains the string
+S of length
+N.
+Output Format
+For each test case, output on a new line minimum possible number of moves that can be made on
+S, such that it's not possible to perform any further moves.
+Constraints
+1≤T≤10
+5
+1≤N≤3⋅10
+5
+S
+i
+∈{’a’, ’b’, ’c’}
+The sum of
+N over all test cases won't exceed
+3⋅10
+5
+.
+Sample 1:
+Input
+Output
+3
+4
+abcc
+9
+cbcaacacb
+7
+aabacbc
+1
+0
+2
+Explanation:
+Test case
+1: Choose
+i=1,j=2,k=3 and delete index
+1. Now,
+S=bcc and no more moves can be performed.
+Test case
+2: No moves can be performed for the given string, so the answer is
+0.
+Test case
+3: One optimal solution is as follows:
+Choose
+i=2,j=6,k=7, and delete index
+7.
+Now,
+S=aabacb.
+Choose
+i=2,j=3,k=5, and delete index
+5.
+Now,
+S=aabab, and no more moves can be performed.
+It can be shown that using less than
+2 moves is not possible.

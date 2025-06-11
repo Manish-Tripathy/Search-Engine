@@ -1,0 +1,80 @@
+Divisors Array (Hard Version)
+This is the hard version of the problem. The only difference between this version and the easy version is the constraints on
+M and
+A
+i
+.
+Chef has received a mathematics assignment that requires array transformations.
+Given an array
+A of size
+N and a positive integer
+M, perform these steps:
+First, create array
+B such that
+B
+i
+=A
+i
+×M! ;
+(M! denotes the factorial of
+M).
+Then, for each element in array
+B, calculate
+F(B
+i
+), where
+F(x) represents the number of divisors of
+x.
+Since these values can be large, output each
+F(B
+i
+) modulo
+(10
+9
++7).
+Input Format
+The first line of input contains two space-separated integers
+N and
+M, as mentioned in the statement.
+The second line of input contains
+N space-separated integers, denoting the elements of array
+A .
+Output Format
+Output
+N space-separated integers representing
+F(B
+i
+) modulo
+(10
+9
++7).
+Constraints
+1≤N≤10
+5
+.
+1≤M≤10
+7
+.
+1≤A
+i
+≤10
+7
+.
+Sample 1:
+Input
+Output
+3 3
+1 2 3
+4 6 6
+Explanation:
+The initial array
+A=[1,2,3] and
+M=3. Thus
+M!=3⋅2⋅1=6.
+The array
+B=[1⋅6,2⋅6,3⋅6]=[6,12,18].
+The number of divisors of
+6,12, and
+18 are
+4,6, and
+6 respectively.

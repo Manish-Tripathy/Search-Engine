@@ -1,0 +1,131 @@
+Tree Colouring (Hard)
+This is worth
+100 points in Division
+1 and
+50 points in Divisions
+2,
+3 and
+4.
+You have a tree with
+N nodes numbered
+1 to
+N.
+You want to assign each node a colour
+C
+i
+(
+1≤C
+i
+≤N) such that the following conditions hold:
+Each colour
+X appears either
+0 times or
+≥2 times.
+Consider all possible pairs
+(A,B) such that
+1≤A<B≤N and
+C
+A
+=C
+B
+:
+Each edge should lie on the unique shortest path of one such pair.
+Let us call a tree good if it is possible to assign colours satisfying the above property.
+We start with a tree of
+1 node only, namely
+1.
+Then for each
+i=2...N, do the following:
+add the node
+i to the tree, by making an edge between
+i and
+P
+i
+.
+output whether the current tree is good or not.
+Further, if the final tree after adding all
+N nodes is good, we require you to output an appropriate colour scheme for that tree.
+If there are multiple valid colour schemes, you should minimize the number of distinct colours used. If there are still multiple valid schemes, all will be accepted.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of multiple lines of input.
+The first line contains
+N - the number of nodes in the tree.
+The second line contains
+N−1 integers -
+P
+2
+,P
+3
+,...,P
+N
+.
+Output Format
+For each test case, output the following:
+on the first line, output a binary string
+S of length
+N−1; where
+S
+i
+=1 if and only if the tree formed by the first
+(i+1) nodes is good, otherwise
+S
+i
+=0.
+If
+S
+N−1
+=1, then output a second line containing
+N integers,
+C
+1
+,C
+2
+,...,C
+N
+(
+1≤C
+i
+≤N) a valid colouring scheme for the final tree with the minimum number of distinct colours.
+Constraints
+1≤T≤10
+4
+2≤N≤2⋅10
+5
+1≤P
+i
+<i
+The sum of
+N over all test cases does not exceed
+2⋅10
+5
+.
+Sample 1:
+Input
+Output
+3
+2
+1
+4
+1 2 3
+4
+1 1 1
+1
+2 2
+100
+101
+1 3 1 3
+Explanation:
+Test Case 1 : The tree with
+2 nodes and
+(1,2) being the only edge is good, as depicted by the colouring
+C=[2,2]. There is only one edge and one pair, and the edge lies on the shortest path of that pair.
+Test Case 2 : It can be shown that the whole tree of
+4 nodes is not good. For example,
+C=[1,2,1,2] makes the edge
+(2,3) occur on the shortest paths of
+2 different pairs.
+Test Case 3 : The whole tree of
+4 nodes is good as shown by the colouring
+C=[1,3,1,3].

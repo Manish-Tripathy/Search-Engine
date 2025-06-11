@@ -1,0 +1,137 @@
+Prefixing
+Given an array
+A of size
+N, construct an array
+B of size
+N such that :
+Every element of
+B is present at least once in
+A;
+For all
+1≤i≤N, every element in prefix
+[A
+1
+,A
+2
+,…,A
+i
+] is present at least once in prefix
+[B
+1
+,B
+2
+,…,B
+i
+].
+If multiple such arrays
+B exist, find the lexicographically largest
+B.
+Note that for two arrays
+X and
+Y, each of size
+N, where
+i is the smallest index at which they differ, array
+X is said to be lexicographically larger than array
+Y when
+X
+i
+>Y
+i
+.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of two lines of input.
+The first line of each test case contains a single integer
+N — the number of elements in the array.
+The second line of each test case contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+— the elements of the array.
+Output Format
+For each test case, output on a new line, lexicographically largest array
+B satisfying the conditions.
+It can be guaranteed that one such array
+B always exists.
+Constraints
+1≤T≤10
+5
+1≤N≤10
+5
+1≤A
+i
+≤10
+5
+The sum of
+N over all test cases won't exceed
+5⋅10
+5
+.
+Sample 1:
+Input
+Output
+3
+4
+5 5 2 3
+2
+8 9
+3
+7 1 7
+5 5 2 3 
+8 9 
+7 1 7
+Explanation:
+Test case
+1: Consider
+B=[5,5,2,3]. Every element of
+B is present at least once in
+A.
+i=1: Prefix of
+A is
+[5] and
+B is
+[5]. Every element in prefix of
+A is present in prefix of
+B at least once.
+i=2: Prefix of
+A is
+[5,5] and
+B is
+[5,5].
+i=3: Prefix of
+A is
+[5,5,2] and
+B is
+[5,5,2].
+i=4: Prefix of
+A is
+[5,5,2,3] and
+B is
+[5,5,2,3].
+Also, this is the lexicographically largest possible
+B.
+Test case
+2: Consider
+B=[8,9]. Every element of
+B is present at least once in
+A.
+i=1: Prefix of
+A is
+[8] and
+B is
+[8].
+i=2: Prefix of
+A is
+[8,9] and
+B is
+[8,9].
+Also, this is the lexicographically largest possible
+B.
+Test case
+3: It can be proved that this is the lexicographically largest possible
+B.

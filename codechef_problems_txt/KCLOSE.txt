@@ -1,0 +1,107 @@
+K-Closeness
+You are given an array
+A of length
+N, and an integer
+K.
+You can perform the following operation:
+Choose any index
+i (
+1≤i≤N), and increase
+A
+i
+by
+K.
+Find the minimum possible value of
+max(A)−min(A) attainable, if you can perform this operation as many times as you like (possibly, zero times).
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of two lines of input.
+The first line of each test case contains two space-separated integers
+N and
+K — the length of the array and the parameter
+K.
+The second line contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+— the initial values of the array elements.
+Output Format
+For each test case, output on a new line the answer: the minimum possible value of
+max(A)−min(A) if you can perform the given operation any number of times.
+Constraints
+1≤T≤10
+5
+1≤N≤2⋅10
+5
+1≤K≤10
+9
+1≤A
+i
+≤10
+9
+The sum of
+N over all test cases won't exceed
+2⋅10
+5
+.
+Sample 1:
+Input
+Output
+4
+3 4
+1 5 4
+3 2
+12 8 4
+4 1
+1 43 62 825
+6 12
+1 2 4 128 130 131
+1
+0
+0
+8
+Explanation:
+Test case
+1: Increase the first element by
+K=4 to obtain the array
+[5,5,4].
+Here,
+max−min=5−4=1, which is the best possible.
+Test case
+2: The second and third elements can be increased by
+2 till they reach
+12, at which point all the elements of the array are equal, so
+max(A)−min(A)=0.
+Test case
+3: Since
+K=1, again it's possible to make all the elements equal.
+Test case
+4: Do the following:
+Increase
+A
+1
+by
+12 repeatedly to make it
+133.
+Increase
+A
+2
+by
+12 repeatedly to make it
+134.
+Increase
+A
+3
+by
+12 repeatedly to make it
+136.
+The array is now
+[133,134,136,128,130,131].
+For this array,
+max(A)−min(A)=136−128=8.
+It can be shown that this is optimal.

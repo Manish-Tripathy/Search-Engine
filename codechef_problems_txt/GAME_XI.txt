@@ -1,0 +1,69 @@
+GAME 11
+Given a list of
+N batsmen and
+M bowlers, each with a given cricketing skill, the selectors are asked to pick a team of
+11 players such that the team has at least
+4 batsmen and
+4 bowlers.
+Find is the maximum total cricketing skill of a team which they can form.
+Note that the total cricketing skill is the sum of cricketing skills of all the players in the team.
+Print
+−1 if making a valid team is not possible.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of multiple lines of input.
+The first line of each test case contains two space-separated integers
+N and
+M — the number of batsmen and bowlers respectively.
+The second line contains
+N space-separated integers, denoting the cricketing skills of the
+N batsmen.
+The third line contains
+M space-separated integers, denoting the cricketing skills of the
+M bowlers.
+Output Format
+For each test case, output on a new line, the maximum total cricketing skill of any valid team, or
+−1 if no such team exists.
+Constraints
+1≤T≤10
+5
+1≤N,M≤10
+5
+1≤A
+i
+,B
+i
+≤10
+9
+The sum of
+N and the sum of
+M over all test cases won't exceed
+10
+5
+.
+Sample 1:
+Input
+Output
+3
+6 6
+1 5 2 3 4 6
+2 6 3 4 5 2
+4 7
+7 6 5 4
+1 2 3 8 9 10 11
+10 3
+1 200 202 202 3 29 19 29 29 19
+1000 200 3000
+42
+66
+-1
+Explanation:
+Test case
+1: Selectors can pick all the players apart from the batsmen with skill
+1.
+Test case
+2: Selectors have no choice but to pick all the players.
+Test case
+3: Selectors have no way to form a team with at least
+4 bowlers.

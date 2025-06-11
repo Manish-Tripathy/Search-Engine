@@ -1,0 +1,71 @@
+Penalty Shoot-out
+In a football match, a penalty shootout is used to determine the winner if the score is tied after regulation and extra time. Each team takes turns attempting five penalty kicks.
+Team A has scored
+X goals in
+3 turns while team B has scored
+Y goals in
+4 turns.
+Determine if it's possible for the penalty shootout to end with equal score after both teams have taken all
+5 of their penalty kicks.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of two space-separated integers
+X and
+Y — the number of goals scored by team A in
+3 turns and team B in
+4 turns respectively.
+Output Format
+For each test case, output on a new line YES if match can still end in draw, otherwise output NO.
+You may print each character of the output in either uppercase or lowercase (for example, the strings YES, yEs, yes, and yeS will all be treated as identical).
+Constraints
+1≤T≤1000
+0≤X≤3
+0≤Y≤4
+Sample 1:
+Input
+Output
+3
+1 2
+3 0
+1 1
+YES
+NO
+YES
+Explanation:
+Test case
+1: Team A can score
+1 and
+0 goals in their
+4
+th
+and
+5
+th
+turn respectively and team B can score
+0 goals in
+5
+th
+turn.
+This way the final score of penalty for both teams would be
+2.
+Test case
+2: Even if team B scores a goal in
+5
+th
+turn, their total would be
+1, which is less than the score of team A.
+Test case
+3: Team A can score
+0 and
+1 goal in their
+4
+th
+and
+5
+th
+turn respectively and team B can score
+1 goal in
+5
+th
+turn.

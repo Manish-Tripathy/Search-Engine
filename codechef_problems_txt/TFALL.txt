@@ -1,0 +1,173 @@
+Double Trouble
+Alice has
+N magical balls placed on the
+x-axis. The
+i-th ball is initially at position
+X
+i
+and has a power of
+P
+i
+.
+It is guaranteed that
+X
+i
+<X
+i+1
+for
+1≤i<N.
+Initially, none of the balls are activated.
+Alice can do the following at most twice:
+Choose an index
+i (
+1≤i≤N) such that ball
+i is not activated.
+Activate ball
+i, and choose a direction for it (either right or left).
+When ball
+is activated in a certain direction, the following process takes place:
+The ball will move
+P
+i
+units in the chosen direction.
+If, while moving, it strikes another ball
+j, ball
+i will immediately disappear. Then,
+If ball
+j was previously activated, nothing happens, and the process immediately ends.
+Otherwise, ball
+j activates in the same direction as ball
+i (that is, if ball
+i was moving left, ball
+j will move left too).
+Note that the power of ball
+j doesn't change, and remains
+P
+j
+.
+If it never strikes another ball, it simply stops after moving a distance of
+P
+i
+units.
+In this case, the ball does not disappear.
+Using at most two moves, is it possible for Alice to activate every ball?
+Note that Alice can make her second move only after the entire process from the first move has completed.
+See the samples below for an explained example.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of three lines of input.
+The first line of each test case contains a single integer
+N — the number of balls with Alice has.
+The second line of each test case contains
+N space-separated integers
+X
+1
+,X
+2
+,…,X
+N
+— the positions of the balls.
+The third line of each test case contains
+N space-separated integers
+P
+1
+,P
+2
+,…,P
+N
+— the powers of the balls.
+Output Format
+For each test case, output on a new line the answer: YES if Alice can ensure that at every ball has been activated in the end, and No otherwise.
+Each letter of the output may be printed in either uppercase or lowercase, i.e, the strings NO, No, nO, and no will all be treated as equivalent.
+Constraints
+1≤T≤2⋅10
+4
+2≤N≤2⋅10
+5
+1≤X
+i
+≤10
+9
+1≤P
+i
+≤10
+9
+X
+i
+<X
+i+1
+for every
+1≤i<N.
+The sum of
+N over all test cases won't exceed
+2⋅10
+5
+.
+Sample 1:
+Input
+Output
+5
+5
+1 3 5 9 20
+1 1 2 10 4
+4
+1 4 12 15
+1 5 3 1
+4
+1 4 12 15
+1 2 3 1
+5
+1 4 10 11 15
+3 1 1 3 7
+4
+1 4 12 15
+3 1 3 1
+NO
+YES
+NO
+YES
+YES
+Explanation:
+Test case
+1: No matter what Alice does, it's impossible to activate all five balls.
+Test case
+2: Alice can do the following:
+Activate ball
+2 towards the left.
+It will move
+P
+2
+=5 units to the left. On its way, it will hit ball
+1 at position
+X
+1
+=1.
+This causes ball
+2 to disappear, and ball
+1 to activate towards the left. Ball
+1 will move
+P
+1
+=1 unit and then stop, not hitting anything.
+On her second move, activate ball
+3 to the right.
+This will cause it to move
+P
+3
+=3 units, and hence hit ball
+4.
+Ball
+3 disappears, and ball
+4 will activate and move right.
+All four balls were activated at least once, as desired.
+Test case
+3: No matter what Alice does, it's impossible to activate all four balls.
+Test case
+4: Alice can first activate the first ball rightwards, which will hit the second ball and activate it. The second ball will move rightward one unit, and the process ends.
+Then, Alice can activate the fifth ball leftwards. That causes the following steps:
+The fifth ball will hit the fourth. The fifth ball disappears, and the fourth activates to the left.
+The fourth ball will hit the third. The fourth disappears, and the third activates to the left.
+All five balls were activated, so the answer is YES.
+Test case
+5: Alice can activate the first and third balls rightwards, and they'll hit (and hence activate) the second and fourth balls, respectively.
