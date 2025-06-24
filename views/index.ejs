@@ -9,8 +9,14 @@
 <body>
   <div class="container">
     <h1>CodeChef Problem Search</h1>
-    <form method="POST" action="/search">
+    <!-- <form method="POST" action="/search">
       <input type="text" name="query" placeholder="Search by name or code" />
+      <button type="submit">Search</button>
+    </form> -->
+    <form method="POST" action="/search" style="display: flex; gap: 10px; flex-wrap: wrap;">
+      <input type="text" name="query" placeholder="Search by name or code" />
+      <input type="number" name="minDifficulty" placeholder="Min Difficulty (e.g., 1900)" />
+      <input type="number" name="maxDifficulty" placeholder="Max Difficulty (e.g., 2000)" />
       <button type="submit">Search</button>
     </form>
     
