@@ -10,7 +10,7 @@
 
 
 // // const mongoose = require('mongoose');
-// URI='mongodb+srv://manishtripathy2004:g34bLilXvxz1ngPr@cluster0.q794v71.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
+//URI
 // // mongoose.connect(URI, {
 // //   useNewUrlParser: true,
 // //   useUnifiedTopology: true
@@ -203,7 +203,7 @@ const trie = require('./trie');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-const URI = 'mongodb+srv://manishtripathy2004:g34bLilXvxz1ngPr@cluster0.q794v71.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
+const URI=process.env.MONGO_URI;
 mongoose.connect(URI)
   .then(() => console.log('✅ MongoDB Atlas connected'))
   .catch((err) => console.error('❌ MongoDB connection error:', err));
