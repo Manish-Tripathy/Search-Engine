@@ -203,7 +203,7 @@ const trie = require('./trie');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-const URI='mongodb+srv://manishtripathy2004:sLpQe4S9UHpTZeF7@cluster0.q794v71.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
+const URI=MONGO_URI;
 mongoose.connect(URI)
   .then(() => console.log('✅ MongoDB Atlas connected'))
   .catch((err) => console.error('❌ MongoDB connection error:', err));
